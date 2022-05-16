@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
+		31E99F102832962900F1539E /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E99F0F2832962900F1539E /* BreedsListView.swift */; };
 		3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* Button.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31E99F0F2832962900F1539E /* BreedsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListView.swift; sourceTree = "<group>"; };
 		3F33F3BA282E83A2002A3BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31E99F0E2832960F00F1539E /* BreedsList */ = {
+			isa = PBXGroup;
+			children = (
+				31E99F0F2832962900F1539E /* BreedsListView.swift */,
+			);
+			path = BreedsList;
+			sourceTree = "<group>";
+		};
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		3FA28A88282D282D00DC2FD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				31E99F0E2832960F00F1539E /* BreedsList */,
 				3FBCE7EA282AAC6F004450D0 /* ContentView.swift */,
 			);
 			path = Scenes;
@@ -277,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
+				31E99F102832962900F1539E /* BreedsListView.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
