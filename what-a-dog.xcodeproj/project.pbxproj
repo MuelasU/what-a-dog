@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
+		3191FDBA2833BAEA002B3ED0 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDB92833BAEA002B3ED0 /* BreedsListViewCard.swift */; };
 		31E99F102832962900F1539E /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E99F0F2832962900F1539E /* BreedsListView.swift */; };
 		3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* Button.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3191FDB92833BAEA002B3ED0 /* BreedsListViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewCard.swift; sourceTree = "<group>"; };
 		31E99F0F2832962900F1539E /* BreedsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListView.swift; sourceTree = "<group>"; };
 		3F33F3BA282E83A2002A3BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				31E99F0F2832962900F1539E /* BreedsListView.swift */,
+				3191FDB92833BAEA002B3ED0 /* BreedsListViewCard.swift */,
 			);
 			path = BreedsList;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				31E99F102832962900F1539E /* BreedsListView.swift in Sources */,
+				3191FDBA2833BAEA002B3ED0 /* BreedsListViewCard.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
