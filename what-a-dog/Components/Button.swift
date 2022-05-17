@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Button: View {
+struct ButtonTmp: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -8,6 +8,6 @@ struct Button: View {
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
-        Button()
+        ButtonTmp()
     }
 }
