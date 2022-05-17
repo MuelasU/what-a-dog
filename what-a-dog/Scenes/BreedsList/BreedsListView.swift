@@ -5,16 +5,18 @@
 //  Created by Eduardo Dini on 16/05/22.
 //
 
+import Combine
 import SwiftUI
 
 struct BreedsListView: View {
+    @StateObject var viewModel = BreedListViewModel()
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
-    
+
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(0 ... 999, id: \.self) { _ in
-                    BreedsListViewCard(nome: "Catioro", image: nil)
+            LazyVGrid(columns: gridItemLayout, spacing: 8) {
+                ForEach(viewModel.users) { dog in
+                    BreedsListViewCard(nome: dog.name, image: nil)
                 }
             }
             .padding([.leading, .trailing])

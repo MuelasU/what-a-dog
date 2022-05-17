@@ -10,6 +10,10 @@
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
 		3191FDBA2833BAEA002B3ED0 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDB92833BAEA002B3ED0 /* BreedsListViewCard.swift */; };
 		3191FDBC2833DA09002B3ED0 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDBB2833DA09002B3ED0 /* BreedListViewModel.swift */; };
+		3191FDBE2833DAB0002B3ED0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDBD2833DAB0002B3ED0 /* Dog.swift */; };
+		3191FDC22833E9D6002B3ED0 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDC12833E9D6002B3ED0 /* DogImage.swift */; };
+		3191FDC42833EA9B002B3ED0 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDC32833EA9B002B3ED0 /* DogWeight.swift */; };
+		3191FDC62833EADD002B3ED0 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FDC52833EADD002B3ED0 /* DogHeight.swift */; };
 		31E99F102832962900F1539E /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E99F0F2832962900F1539E /* BreedsListView.swift */; };
 		3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* Button.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		3191FDB92833BAEA002B3ED0 /* BreedsListViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewCard.swift; sourceTree = "<group>"; };
 		3191FDBB2833DA09002B3ED0 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
+		3191FDBD2833DAB0002B3ED0 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		3191FDC12833E9D6002B3ED0 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
+		3191FDC32833EA9B002B3ED0 /* DogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogWeight.swift; sourceTree = "<group>"; };
+		3191FDC52833EADD002B3ED0 /* DogHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogHeight.swift; sourceTree = "<group>"; };
 		31E99F0F2832962900F1539E /* BreedsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListView.swift; sourceTree = "<group>"; };
 		3F33F3BA282E83A2002A3BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -65,6 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				3FA28A86282D277500DC2FD8 /* API */,
+				3191FDBD2833DAB0002B3ED0 /* Dog.swift */,
+				3191FDC12833E9D6002B3ED0 /* DogImage.swift */,
+				3191FDC32833EA9B002B3ED0 /* DogWeight.swift */,
+				3191FDC52833EADD002B3ED0 /* DogHeight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,13 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3191FDBE2833DAB0002B3ED0 /* Dog.swift in Sources */,
+				3191FDC62833EADD002B3ED0 /* DogHeight.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				3191FDBC2833DA09002B3ED0 /* BreedListViewModel.swift in Sources */,
 				31E99F102832962900F1539E /* BreedsListView.swift in Sources */,
 				3191FDBA2833BAEA002B3ED0 /* BreedsListViewCard.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
+				3191FDC22833E9D6002B3ED0 /* DogImage.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
+				3191FDC42833EA9B002B3ED0 /* DogWeight.swift in Sources */,
 				3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
