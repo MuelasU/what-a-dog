@@ -36,15 +36,17 @@ struct UseOrDoNotUseImageButtons: View {
     var body: some View {
         HStack {
             Spacer()
-            ImageOptionButton(
+            CameraActionButton(
                 symbol: "x.circle.fill",
-                action: { camera.reTakePicture() }
+                action: { camera.reTakePicture() },
+                fontSize: 60
             )
             Spacer()
             Spacer()
-            ImageOptionButton(
+            CameraActionButton(
                 symbol: "checkmark.circle.fill",
-                action: {}
+                action: {},
+                fontSize: 60
             )
             Spacer()
         }
@@ -59,7 +61,8 @@ struct ActionCameraButtons: View {
             Spacer()
             CameraActionButton(
                 symbol: "photo.fill",
-                action: {}
+                action: {},
+                fontSize: 40
             )
             Spacer()
             Spacer()
@@ -70,7 +73,8 @@ struct ActionCameraButtons: View {
             Spacer()
             CameraActionButton(
                 symbol: "square.grid.2x2.fill",
-                action: {}
+                action: {},
+                fontSize: 40
             )
             Spacer()
         }

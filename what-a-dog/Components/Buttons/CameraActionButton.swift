@@ -10,11 +10,12 @@ import SwiftUI
 struct CameraActionButton: View {
     let symbol: String
     let action: () -> Void
+    let fontSize: CGFloat
 
     var body: some View {
         Button(action: action, label: {
             Image(systemName: symbol)
-                .font(.system(size: 40))
+                .font(.system(size: fontSize))
                 .foregroundColor(.white)
         })
     }
@@ -22,6 +23,10 @@ struct CameraActionButton: View {
 
 struct CameraActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        CameraActionButton(symbol: "photo.fill", action: {})
+        CameraActionButton(
+            symbol: "photo.fill",
+            action: {},
+            fontSize: 40
+        )
     }
 }
