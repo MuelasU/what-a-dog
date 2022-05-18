@@ -16,6 +16,7 @@
 		3FBCE7ED282AAC71004450D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EC282AAC71004450D0 /* Assets.xcassets */; };
 		3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EF282AAC71004450D0 /* Preview Assets.xcassets */; };
 		3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7F6282AAD2A004450D0 /* .gitignore */; };
+		D0309EFF2833CE2A00C5CAE3 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0309EFE2833CE2A00C5CAE3 /* Modal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3FBCE7F6282AAD2A004450D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
+		D0309EFE2833CE2A00C5CAE3 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3FBCE7EA282AAC6F004450D0 /* ContentView.swift */,
+				D0309EFE2833CE2A00C5CAE3 /* Modal.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
+				D0309EFF2833CE2A00C5CAE3 /* Modal.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
