@@ -6,7 +6,6 @@
 //
 
 import AVFoundation
-import Foundation
 import SwiftUI
 
 class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
@@ -53,8 +52,7 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
                 session.addOutput(output)
             }
             session.commitConfiguration()
-        }
-        catch {
+        } catch {
             print("Input da camera não conseguiu ser configurado")
             print(error.localizedDescription)
         }

@@ -53,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A8B11C28350F5A0010C57B /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				24E73A762833B86300CBA2EC /* CameraView.swift */,
+				24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */,
+				24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +90,8 @@
 		3FA28A88282D282D00DC2FD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				24A8B11C28350F5A0010C57B /* Camera */,
 				3FBCE7EA282AAC6F004450D0 /* ContentView.swift */,
-				24E73A762833B86300CBA2EC /* CameraView.swift */,
-				24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */,
-				24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -440,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-doggggg";
+				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -471,7 +479,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-doggggg";
+				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
