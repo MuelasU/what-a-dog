@@ -12,33 +12,43 @@ struct Modal: View {
     @Binding var showingSheet: Bool
 
     var body: some View {
-        VStack {
-            Image("card_square")
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10.0)
-                .padding(.all, 16)
+        NavigationView {
+            VStack {
+                Spacer()
+                Image("card_square")
+                    .resizable()
+                    .scaledToFill()
+                    .cornerRadius(10.0)
+                    .padding(.all, 16)
+                Spacer()
 
-            List(0 ..< 5) { _ in
-                HStack {
-                    Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
-                    VStack(alignment: .leading) {
-                        Text("Teckel").foregroundColor(Color("WADgreen2"))
+                List(0 ..< 5) { _ in
+                    HStack {
+                        Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
+                        HStack(spacing: 150) {
+                            Text("Teckel").foregroundColor(Color("WADgreen2"))
+                            Text("20%").foregroundColor(Color("WADgreen2"))
+                                .font(Font.custom("SF Pro Rounded", size: 17))
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.trailing)
+                        }
                     }
-                    Text("20%").foregroundColor(Color("WADgreen2"))
-                        .font(Font.custom("SF Pro Rounded", size: 17))
-                        .fontWeight(.semibold)
+                    .padding(.all, 8)
+                    .listRowBackground(Color("WADgray2"))
                 }
-                .padding()
-                .background(Color("WADgray2"))
-                .cornerRadius(10)
+                .padding(.bottom, 8)
+                Spacer()
+
+                WADButton(
+                    text: "Add to my collection",
+                    icon: Image(systemName: "plus")
+                ) {
+                    showingSheet.toggle()
+                }
             }
-            WADButton(
-                text: "Add to my collection",
-                icon: Image(systemName: "plus")
-            ) {
-                showingSheet.toggle()
-            }
+            .background(Color("WADgray1"))
+            .navigationBarTitle(Text("What a dog?"))
+            
         }
     }
 }
@@ -50,13 +60,13 @@ struct ModalView: View {
             showingSheet.toggle()
         }
         .sheet(isPresented: $showingSheet) {
-            Modal(showingSheet: $showingSheet) // TO DO: adicionar a açao que salva a opçao escolhida na coleçao
+            Modal(showingSheet: $showingSheet)
         }
     }
 }
 
 struct ModalPreviews: PreviewProvider {
     static var previews: some View {
-        ModalView()
+        Modal(showingSheet: .constant(true))
     }
 }
