@@ -11,10 +11,13 @@ import SwiftUI
 class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var isTaken = false
     @Published var session = AVCaptureSession()
+    @Published var mustShowImagePicker = false
+    @Published var selectedImage: Image?
 
-    var alert = false
     var output = AVCapturePhotoOutput()
+}
 
+extension CameraViewModel {
     func checkForPermission() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
@@ -27,7 +30,7 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
                 }
             }
         case .denied:
-            alert.toggle()
+            print("Acesso negado")
             return
         default:
             return

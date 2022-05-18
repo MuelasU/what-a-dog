@@ -8,37 +8,40 @@
 import SwiftUI
 
 struct CameraView: View {
-    @StateObject var camera = CameraViewModel()
+    @StateObject var viewModel = CameraViewModel()
 
     var body: some View {
         ZStack {
-            CameraPreview(camera: camera)
+            CameraPreview(viewModel: viewModel)
                 .ignoresSafeArea(.all, edges: .all)
             VStack {
                 Spacer()
-                if camera.isTaken {
-                    UseOrDoNotUseImageButtons(camera: camera)
+                if viewModel.isTaken {
+                    UseOrDoNotUseImageButtons(viewModel: viewModel)
                 } else {
-                    ActionCameraButtons(camera: camera)
+                    ActionCameraButtons(viewModel: viewModel)
                 }
             }
             .padding()
+            if viewModel.mustShowImagePicker {
+                ImagePickerPreview(viewModel: viewModel)
+            }
         }
         .onAppear {
-            camera.checkForPermission()
+            viewModel.checkForPermission()
         }
     }
 }
 
 struct UseOrDoNotUseImageButtons: View {
-    @StateObject var camera: CameraViewModel
+    @StateObject var viewModel: CameraViewModel
 
     var body: some View {
         HStack {
             Spacer()
             CameraActionButton(
                 symbol: "x.circle.fill",
-                action: { camera.reTakePicture() },
+                action: { viewModel.reTakePicture() },
                 fontSize: 60
             )
             Spacer()
@@ -54,20 +57,20 @@ struct UseOrDoNotUseImageButtons: View {
 }
 
 struct ActionCameraButtons: View {
-    @StateObject var camera: CameraViewModel
+    @StateObject var viewModel: CameraViewModel
 
     var body: some View {
         HStack {
             Spacer()
             CameraActionButton(
                 symbol: "photo.fill",
-                action: {},
+                action: { viewModel.mustShowImagePicker = true },
                 fontSize: 40
             )
             Spacer()
             Spacer()
             TakePictureButton(
-                action: { camera.takePicture() }
+                action: { viewModel.takePicture() }
             )
             Spacer()
             Spacer()
