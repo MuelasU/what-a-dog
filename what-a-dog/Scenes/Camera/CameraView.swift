@@ -71,11 +71,13 @@ struct ActionCameraButtons: View {
             )
             Spacer()
             Spacer()
-            CameraActionButton(
-                symbol: "square.grid.2x2.fill",
-                action: {},
-                fontSize: 40
-            )
+            NavigationLink(destination: BreedsListView()) {
+                CameraActionButton(
+                    symbol: "square.grid.2x2.fill",
+                    action: {},
+                    fontSize: 40
+                )
+            }
             Spacer()
         }
     }

@@ -8,8 +8,6 @@
 import Foundation
 
 struct DogHeight: Decodable {
-
     var imperial: String
     var metric: String
-    
 }

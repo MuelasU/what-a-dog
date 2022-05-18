@@ -8,10 +8,8 @@
 import Foundation
 
 struct DogImage: Decodable, Identifiable {
-
     var id: String
     var width: Int
     var height: Int
     var url: String
-    
 }

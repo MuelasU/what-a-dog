@@ -8,7 +8,6 @@
 import Foundation
 
 struct Dog: Decodable, Identifiable {
-
 //    var weight: DogWeight
 //    var height: DogHeight
     var id: Int
@@ -18,5 +17,4 @@ struct Dog: Decodable, Identifiable {
 //    var lifeSpan: String
 //    var temperament: String
 //    var image: DogImage
-    
 }
