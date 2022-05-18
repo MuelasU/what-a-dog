@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24A8B11F2835148D0010C57B /* CameraActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8B11E2835148D0010C57B /* CameraActionButton.swift */; };
+		24E73A772833B86300CBA2EC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A762833B86300CBA2EC /* CameraView.swift */; };
+		24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A782833BBD900CBA2EC /* TakePictureButton.swift */; };
+		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
+		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
-		3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* Button.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
 		3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7E8282AAC6F004450D0 /* MainApp.swift */; };
@@ -19,7 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F33F3BA282E83A2002A3BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		24A8B11E2835148D0010C57B /* CameraActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraActionButton.swift; sourceTree = "<group>"; };
+		24E73A762833B86300CBA2EC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		24E73A782833BBD900CBA2EC /* TakePictureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButton.swift; sourceTree = "<group>"; };
+		24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3FBCE7E5282AAC6F004450D0 /* what-a-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-a-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A8B11C28350F5A0010C57B /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				24E73A762833B86300CBA2EC /* CameraView.swift */,
+				24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */,
+				24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		24A8B11D283514600010C57B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				24E73A782833BBD900CBA2EC /* TakePictureButton.swift */,
+				24A8B11E2835148D0010C57B /* CameraActionButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +99,7 @@
 		3FA28A88282D282D00DC2FD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				24A8B11C28350F5A0010C57B /* Camera */,
 				3FBCE7EA282AAC6F004450D0 /* ContentView.swift */,
 			);
 			path = Scenes;
@@ -80,7 +108,7 @@
 		3FA28A89282D296C00DC2FD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F33F3BA282E83A2002A3BEE /* Button.swift */,
+				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -279,8 +307,12 @@
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
-				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
+				24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */,
+				24E73A772833B86300CBA2EC /* CameraView.swift in Sources */,
+				24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */,
 				3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */,
+				24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */,
+				24A8B11F2835148D0010C57B /* CameraActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +442,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = P952S3W7DW;
+				DEVELOPMENT_TEAM = A896M3FV6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Libera pa nois";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -440,9 +473,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = P952S3W7DW;
+				DEVELOPMENT_TEAM = A896M3FV6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Libera pa nois";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
