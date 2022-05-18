@@ -48,7 +48,6 @@ struct Modal: View {
             }
             .background(Color("WADgray1"))
             .navigationBarTitle(Text("What a dog?"))
-            
         }
     }
 }
