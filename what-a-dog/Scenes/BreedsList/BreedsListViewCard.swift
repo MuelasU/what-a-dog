@@ -12,22 +12,23 @@ struct BreedsListViewCard: View {
     @State var image: Image?
 
     var body: some View {
-        ZStack {
-            Image("green_collection_card")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-
-            VStack {
-                Text(nome ?? "Test")
-                    .foregroundColor(.white)
-                    .bold()
-                    .padding(.bottom)
-                (image ?? Image(systemName: "questionmark.circle.fill"))
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            .padding()
-        }
+        Image("green_collection_card")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .overlay(
+                VStack {
+                    Text(nome ?? "Test")
+                        .foregroundColor(.white)
+                        .bold()
+                        .padding()
+                        .lineLimit(1)
+                    Spacer()
+                    (image ?? Image(systemName: "questionmark.circle.fill"))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                }
+            )
     }
 }
 
