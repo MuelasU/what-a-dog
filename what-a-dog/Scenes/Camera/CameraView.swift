@@ -17,50 +17,62 @@ struct CameraView: View {
             VStack {
                 Spacer()
                 if camera.isTaken {
-                    HStack {
-                        Spacer()
-                        Button(action: { camera.reTakePicture() }, label: {
-                            Image(systemName: "x.circle.fill")
-                                .font(.system(size: 60))
-                                .foregroundColor(.white)
-                        })
-                        Spacer()
-                        Spacer()
-                        Button(action: {}, label: {
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.system(size: 60))
-                                .foregroundColor(.white)
-                        })
-                        Spacer()
-                    }
+                    UseOrDoNotUseImageButtons(camera: camera)
                 } else {
-                    HStack {
-                        Spacer()
-                        Button(action: {}, label: {
-                            Image(systemName: "photo.fill")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                        })
-                        Spacer()
-                        Spacer()
-                        Button(action: { camera.takePicture() }, label: {
-                            CameraButton()
-                        })
-                        Spacer()
-                        Spacer()
-                        Button(action: {}, label: {
-                            Image(systemName: "square.grid.2x2.fill")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                        })
-                        Spacer()
-                    }
+                    ActionCameraButtons(camera: camera)
                 }
             }
             .padding()
         }
         .onAppear {
             camera.checkForPermission()
+        }
+    }
+}
+
+struct UseOrDoNotUseImageButtons: View {
+    @StateObject var camera: CameraViewModel
+
+    var body: some View {
+        HStack {
+            Spacer()
+            ImageOptionButton(
+                symbol: "x.circle.fill",
+                action: { camera.reTakePicture() }
+            )
+            Spacer()
+            Spacer()
+            ImageOptionButton(
+                symbol: "checkmark.circle.fill",
+                action: {}
+            )
+            Spacer()
+        }
+    }
+}
+
+struct ActionCameraButtons: View {
+    @StateObject var camera: CameraViewModel
+
+    var body: some View {
+        HStack {
+            Spacer()
+            CameraActionButton(
+                symbol: "photo.fill",
+                action: {}
+            )
+            Spacer()
+            Spacer()
+            TakePictureButton(
+                action: { camera.takePicture() }
+            )
+            Spacer()
+            Spacer()
+            CameraActionButton(
+                symbol: "square.grid.2x2.fill",
+                action: {}
+            )
+            Spacer()
         }
     }
 }
