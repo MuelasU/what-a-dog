@@ -47,7 +47,7 @@ struct CardView: View {
                 .padding()
 
             VStack(spacing: 1) {
-                ForEach(0..<4) { iterator in
+                ForEach(0 ..< 4) { iterator in
                     if iterator == 0 {
                         CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
                             .cornerRadius(radius: 8, corners: [.topLeft, .topRight])
@@ -61,9 +61,13 @@ struct CardView: View {
             }
             .padding()
         }
-        .background(CustomColor.WADgreen1)
+        .background(
+            // TODO: Teria como fazer isso sem dar scale ?
+            Image("card_square")
+                .scaleEffect(1.5)
+        )
+        .cornerRadius(8)
         .padding()
-        .cornerRadius(60)
     }
 }
 
