@@ -13,29 +13,8 @@ class BreedListViewModel: ObservableObject {
     @Published var users = [Dog]()
     private var cancellable = Set<AnyCancellable>()
 
-    let formatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .medium
-        return dateFormatter
-    }()
-
     init() {
-        setupPublisher()
-    }
-
-    private func setupPublisher() {
-        setupTimePublisher()
         setupDataTaskPublisher()
-    }
-
-    private func setupTimePublisher() {
-        Timer.publish(every: 1, on: .main, in: .default)
-            .autoconnect()
-            .receive(on: RunLoop.main)
-            .sink { value in
-                self.time = self.formatter.string(from: value)
-            }
-            .store(in: &cancellable)
     }
 
     private func setupDataTaskPublisher() {
