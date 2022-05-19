@@ -17,6 +17,7 @@
 		3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EF282AAC71004450D0 /* Preview Assets.xcassets */; };
 		3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7F6282AAD2A004450D0 /* .gitignore */; };
 		8601286428326D26007A857E /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601286328326D26007A857E /* CardsView.swift */; };
+		86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86328F5D283654C2006B5B1E /* CornerRadius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
 		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		86328F5D283654C2006B5B1E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			children = (
 				3F33F3BA282E83A2002A3BEE /* Button.swift */,
 				8601286328326D26007A857E /* CardsView.swift */,
+				86328F5D283654C2006B5B1E /* CornerRadius.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8601286428326D26007A857E /* CardsView.swift in Sources */,
+				86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,

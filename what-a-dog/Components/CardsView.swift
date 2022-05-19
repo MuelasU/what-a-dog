@@ -13,6 +13,25 @@ struct DogsCharacteristics {
     let value: Int
 }
 
+struct CharacteristicsRow: View {
+    var name: String
+    var value: Int
+
+    var body: some View {
+        HStack {
+            Text(name)
+                .padding()
+                .font(.system(size: 20, weight: .medium))
+            Spacer()
+            Text(String(value))
+                .padding()
+                .font(.system(size: 20, weight: .medium))
+        }
+        .background(CustomColor.WADbeige1)
+        .foregroundColor(CustomColor.WADgreen2)
+    }
+}
+
 struct CardView: View {
     let dogValues = [DogsCharacteristics(name: "Size", value: 2),
                      DogsCharacteristics(name: "Weight", value: 1),
@@ -24,27 +43,25 @@ struct CardView: View {
             Image("SausageDog")
                 .resizable()
                 .scaledToFit()
+                .cornerRadius(12)
                 .padding()
-                .cornerRadius(60)
 
             VStack(spacing: 1) {
-                ForEach(dogValues, id: \.id) { value in
-                    HStack {
-                        Text(value.name)
-                            .padding()
-                            .font(.system(size: 20, weight: .medium))
-                        Spacer()
-                        Text(String(value.value))
-                            .padding()
-                            .font(.system(size: 20, weight: .medium))
+                ForEach(0..<4) { iterator in
+                    if iterator == 0 {
+                        CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
+                            .cornerRadius(radius: 8, corners: [.topLeft, .topRight])
+                    } else if iterator == 3 {
+                        CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
+                            .cornerRadius(radius: 8, corners: [.bottomLeft, .bottomRight])
+                    } else {
+                        CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
                     }
-                    .background(CustomColor.tableColorCard)
-                    .foregroundColor(CustomColor.fontColorCard)
                 }
             }
             .padding()
         }
-        .background(CustomColor.backgroundColorCard)
+        .background(CustomColor.WADgreen1)
         .padding()
         .cornerRadius(60)
     }
