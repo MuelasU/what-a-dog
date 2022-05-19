@@ -15,23 +15,28 @@ struct Modal: View {
         NavigationView {
             VStack {
                 Spacer()
-                Image("card_square")
-                    .resizable()
-                    .scaledToFill()
-                    .cornerRadius(10.0)
-                    .padding(.all, 16)
-                Spacer()
+                ZStack {
+                    Image("card_square")
+                        .resizable()
+                        .scaledToFill()
+                        .cornerRadius(10.0)
+                        .overlay(
+                            Image(systemName: "photo")
+                                .resizable()
+                                .cornerRadius(10.0)
+                                .padding(.all, 24)
+                        )
+                }.padding(.all, 16)
 
                 List(0 ..< 5) { _ in
                     HStack {
                         Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
-                        HStack(spacing: 150) {
-                            Text("Teckel").foregroundColor(Color("WADgreen2"))
-                            Text("20%").foregroundColor(Color("WADgreen2"))
-                                .font(Font.custom("SF Pro Rounded", size: 17))
-                                .fontWeight(.semibold)
-                                .multilineTextAlignment(.trailing)
-                        }
+                        Text("Teckel").foregroundColor(Color("WADgreen2"))
+                        Spacer()
+                        Text("20%").foregroundColor(Color("WADgreen2"))
+                            .font(Font.custom("SF Pro Rounded", size: 17))
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.trailing)
                     }
                     .padding(.all, 8)
                     .listRowBackground(Color("WADgray2"))
@@ -48,6 +53,7 @@ struct Modal: View {
             }
             .background(Color("WADgray1"))
             .navigationBarTitle(Text("What a dog?"))
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
