@@ -21,11 +21,13 @@ struct Modal: View {
                         .scaledToFill()
                         .cornerRadius(10.0)
                         .overlay(
-                            Image(systemName: "photo")
-                                .resizable()
+                            Image("dog")
+                                .centerCropped()
                                 .cornerRadius(10.0)
                                 .padding(.all, 24)
+                                .clipped()
                         )
+
                 }.padding(.all, 16)
 
                 List(0 ..< 5) { _ in
@@ -54,12 +56,14 @@ struct Modal: View {
             .background(Color("WADgray1"))
             .navigationBarTitle(Text("What a dog?"))
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
         }
     }
 }
 
 struct ModalView: View {
     @State private var showingSheet = false
+
     var body: some View {
         Button("Show Sheet") {
             showingSheet.toggle()
@@ -73,5 +77,17 @@ struct ModalView: View {
 struct ModalPreviews: PreviewProvider {
     static var previews: some View {
         Modal(showingSheet: .constant(true))
+    }
+}
+
+extension Image {
+    func centerCropped() -> some View {
+        GeometryReader { geo in
+            self
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
     }
 }
