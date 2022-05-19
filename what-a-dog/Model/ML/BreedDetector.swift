@@ -1,14 +1,18 @@
 import Vision
 
 class BreedDetector {
-    private let classifier : BreedClassifier
-    
-    init() {
+    private let classifier: BreedClassifier
+
+    init?() {
         let configuration = MLModelConfiguration()
         configuration.computeUnits = .all
-        classifier = try! BreedClassifier(configuration: configuration)
+        do {
+            classifier = try BreedClassifier(configuration: configuration)
+        } catch {
+            return nil
+        }
     }
-    
+
     func classify(image: CGImage) throws -> BreedClassification {
         guard
             let image = image.toPixelBuffer(),
@@ -16,7 +20,7 @@ class BreedDetector {
         else {
             throw MLModelError(.generic)
         }
-        
+
         return BreedClassification(probabilities: output.probabilities)
     }
 }
