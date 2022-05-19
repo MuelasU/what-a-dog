@@ -12,7 +12,7 @@ struct BreedsListViewCard: View {
     @State var image: Image?
 
     var body: some View {
-        Image("green_collection_card")
+        Image("card_collection_green")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .overlay(
@@ -29,6 +29,7 @@ struct BreedsListViewCard: View {
                         .padding()
                 }
             )
+            .cornerRadius(20)
     }
 }
 

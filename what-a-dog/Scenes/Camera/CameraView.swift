@@ -9,23 +9,26 @@ import SwiftUI
 
 struct CameraView: View {
     @StateObject var camera = CameraViewModel()
+    @State var selection: Int?
 
     var body: some View {
-        ZStack {
-            CameraPreview(camera: camera)
-                .ignoresSafeArea(.all, edges: .all)
-            VStack {
-                Spacer()
-                if camera.isTaken {
-                    UseOrDoNotUseImageButtons(camera: camera)
-                } else {
-                    ActionCameraButtons(camera: camera)
+        NavigationView {
+            ZStack {
+                CameraPreview(camera: camera)
+                    .ignoresSafeArea(.all, edges: .all)
+                VStack {
+                    Spacer()
+                    if camera.isTaken {
+                        UseOrDoNotUseImageButtons(camera: camera)
+                    } else {
+                        ActionCameraButtons(camera: camera, selection: $selection)
+                    }
                 }
+                .padding()
             }
-            .padding()
-        }
-        .onAppear {
-            camera.checkForPermission()
+            .onAppear {
+                camera.checkForPermission()
+            }
         }
     }
 }
@@ -55,6 +58,7 @@ struct UseOrDoNotUseImageButtons: View {
 
 struct ActionCameraButtons: View {
     @StateObject var camera: CameraViewModel
+    @Binding var selection: Int?
 
     var body: some View {
         HStack {
@@ -71,10 +75,12 @@ struct ActionCameraButtons: View {
             )
             Spacer()
             Spacer()
-            NavigationLink(destination: BreedsListView()) {
+            NavigationLink(destination: BreedsListView(), tag: 1, selection: $selection) {
                 CameraActionButton(
                     symbol: "square.grid.2x2.fill",
-                    action: {},
+                    action: {
+                        selection = 1
+                    },
                     fontSize: 40
                 )
             }

@@ -21,6 +21,8 @@ struct BreedsListView: View {
             }
             .padding([.leading, .trailing])
         }
+        .navigationTitle("Collection")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
