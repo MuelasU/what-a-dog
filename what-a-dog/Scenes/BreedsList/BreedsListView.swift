@@ -15,7 +15,7 @@ struct BreedsListView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {
-                ForEach(viewModel.users) { dog in
+                ForEach(viewModel.dogs) { dog in
                     BreedsListViewCard(nome: dog.name, image: nil)
                 }
             }

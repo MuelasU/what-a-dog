@@ -10,7 +10,7 @@ import Foundation
 
 class BreedListViewModel: ObservableObject {
     @Published var time = ""
-    @Published var users = [Dog]()
+    @Published var dogs = [Dog]()
     private var cancellable = Set<AnyCancellable>()
 
     init() {
@@ -34,7 +34,7 @@ class BreedListViewModel: ObservableObject {
             .decode(type: [Dog].self, decoder: decoder)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in }, receiveValue: { users in
-                self.users = users
+                self.dogs = users
             })
             .store(in: &cancellable)
     }
