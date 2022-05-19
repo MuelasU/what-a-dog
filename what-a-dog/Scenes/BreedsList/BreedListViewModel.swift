@@ -14,10 +14,10 @@ class BreedListViewModel: ObservableObject {
     private var cancellable = Set<AnyCancellable>()
 
     init() {
-        setupDataTaskPublisher()
+        setupBreedsListDataTaskPublisher()
     }
 
-    private func setupDataTaskPublisher() {
+    private func setupBreedsListDataTaskPublisher() {
         let url = URL(string: "https://api.thedogapi.com/v1/breeds?limit=400&page=0")!
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
