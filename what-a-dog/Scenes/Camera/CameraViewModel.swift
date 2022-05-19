@@ -9,11 +9,12 @@ import AVFoundation
 import SwiftUI
 
 class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
-    @Published var isTaken = false
-    @Published var session = AVCaptureSession()
+    @Published var hasTakenPhoto = false
     @Published var mustShowImagePicker = false
+    @Published var hasSelectedPhoto = false
     @Published var selectedImage: Image?
 
+    var session = AVCaptureSession()
     var output = AVCapturePhotoOutput()
 }
 
@@ -67,7 +68,7 @@ extension CameraViewModel {
             self.session.stopRunning()
 
             DispatchQueue.main.async {
-                withAnimation { self.isTaken.toggle() }
+                withAnimation { self.hasTakenPhoto.toggle() }
             }
         }
     }
@@ -76,7 +77,7 @@ extension CameraViewModel {
         DispatchQueue.global(qos: .background).async {
             self.session.startRunning()
             DispatchQueue.main.async {
-                withAnimation { self.isTaken.toggle() }
+                withAnimation { self.hasTakenPhoto.toggle() }
             }
         }
     }

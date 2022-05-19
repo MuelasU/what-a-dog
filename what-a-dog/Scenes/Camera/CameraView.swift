@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CameraView: View {
+    @Binding var hasSelectedImage: Bool
+    @Binding var selectedImage: Image?
     @StateObject var viewModel = CameraViewModel()
 
     var body: some View {
@@ -16,7 +18,7 @@ struct CameraView: View {
                 .ignoresSafeArea(.all, edges: .all)
             VStack {
                 Spacer()
-                if viewModel.isTaken {
+                if viewModel.hasTakenPhoto {
                     UseOrDoNotUseImageButtons(viewModel: viewModel)
                 } else {
                     ActionCameraButtons(viewModel: viewModel)
@@ -24,7 +26,7 @@ struct CameraView: View {
             }
             .padding()
             if viewModel.mustShowImagePicker {
-                ImagePickerPreview(viewModel: viewModel)
+                ImagePickerPreview(hasSelectedImage: $hasSelectedImage, selectedImage: $selectedImage, viewModel: viewModel)
             }
         }
         .onAppear {
@@ -84,8 +86,8 @@ struct ActionCameraButtons: View {
     }
 }
 
-struct CameraView_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraView()
-    }
-}
+// struct CameraView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CameraView(hasSelectedImage: )
+//    }
+// }
