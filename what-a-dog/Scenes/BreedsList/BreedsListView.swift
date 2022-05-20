@@ -16,7 +16,7 @@ struct BreedsListView: View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {
                 ForEach(viewModel.dogs) { dog in
-                    BreedsListViewCard(nome: dog.name, image: nil)
+                    BreedsListViewCard(nome: dog.name, imageURL: URL(string: dog.image?.url ?? ""))
                 }
             }
             .padding([.leading, .trailing])

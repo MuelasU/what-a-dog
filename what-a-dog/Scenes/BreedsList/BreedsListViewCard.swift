@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BreedsListViewCard: View {
     @State var nome: String?
-    @State var image: Image?
+    @State var imageURL: URL?
 
     var body: some View {
         Image("card_collection_green")
@@ -23,10 +23,30 @@ struct BreedsListViewCard: View {
                         .padding()
                         .lineLimit(1)
                     Spacer()
-                    (image ?? Image(systemName: "questionmark.circle.fill"))
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
+                    AsyncImage(url: imageURL) { phase in
+                        switch phase {
+                        case .empty:
+                            Image(systemName: "questionmark.circle.fill")
+                        case let .success(image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding()
+                        case .failure:
+                            Image(systemName: "questionmark.circle.fill")
+                        @unknown default:
+                            // Since the AsyncImagePhase enum isn't frozen,
+                            // we need to add this currently unused fallback
+                            // to handle any new cases that might be added
+                            // in the future:
+                            Image(systemName: "questionmark.circle.fill")
+                        }
+                    }
+
+//                    (image ?? Image(systemName: "questionmark.circle.fill"))
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .padding()
                 }
             )
             .cornerRadius(20)
