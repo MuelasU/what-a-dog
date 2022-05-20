@@ -10,6 +10,9 @@ import SwiftUI
 struct Modal: View {
     @Environment(\.dismiss) var dismiss
     @Binding var showingSheet: Bool
+    @State var selectedItem: String?
+
+    let items: [String] = ["Teckel", "Basset"]
 
     var body: some View {
         NavigationView {
@@ -27,25 +30,14 @@ struct Modal: View {
                                 .padding(.all, 24)
                                 .clipped()
                         )
-
-                }.padding(.all, 16)
-
-                List(0 ..< 5) { _ in
-                    HStack {
-                        Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
-                        Text("Teckel").foregroundColor(Color("WADgreen2"))
-                        Spacer()
-                        Text("20%").foregroundColor(Color("WADgreen2"))
-                            .font(Font.custom("SF Pro Rounded", size: 17))
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.trailing)
-                    }
-                    .padding(.all, 8)
-                    .listRowBackground(Color("WADgray2"))
                 }
-                .padding(.bottom, 8)
+                .padding(.all, 16)
+                List{
+                    ForEach(items, id: \.self) { item in
+                        ModalCell(selectedItem: $selectedItem, name: item)
+                    }
+                }
                 Spacer()
-
                 WADButton(
                     text: "Add to my collection",
                     icon: Image(systemName: "plus")
@@ -57,6 +49,31 @@ struct Modal: View {
             .navigationBarTitle(Text("What a dog?"))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(false)
+        }
+    }
+}
+
+struct ModalCell: View {
+    @Binding var selectedItem: String?
+    let name: String
+    var body: some View {
+        HStack {
+            if name == selectedItem {
+                Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
+            } else {
+                Image(systemName: "checkmark").foregroundColor(Color("WADgray2"))
+            }
+            Text(name).foregroundColor(Color("WADgreen2"))
+            Spacer()
+            Text("20%").foregroundColor(Color("WADgreen2"))
+                .font(Font.custom("SF Pro Rounded", size: 17))
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.trailing)
+        }
+        .padding(.all, 8)
+        .listRowBackground(Color("WADgray2"))
+        .onTapGesture {
+            self.selectedItem = self.name
         }
     }
 }
