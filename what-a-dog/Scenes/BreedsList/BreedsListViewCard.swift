@@ -17,11 +17,14 @@ struct BreedsListViewCard: View {
             .aspectRatio(contentMode: .fit)
             .overlay(
                 VStack {
-                    Text(nome ?? "Test")
-                        .foregroundColor(.white)
-                        .bold()
-                        .padding()
-                        .lineLimit(1)
+                    HStack {
+                        Text(nome ?? "Test")
+                            .foregroundColor(.white)
+                            .bold()
+                            .padding([.leading, .trailing, .top], 8)
+                            .lineLimit(1)
+                        Spacer()
+                    }
                     Spacer()
                     AsyncImage(url: imageURL) { phase in
                         switch phase {
@@ -29,27 +32,31 @@ struct BreedsListViewCard: View {
                             Image(systemName: "questionmark.circle.fill")
                         case let .success(image):
                             image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding()
+                                .centerCropped()
+
                         case .failure:
                             Image(systemName: "questionmark.circle.fill")
                         @unknown default:
-                            // Since the AsyncImagePhase enum isn't frozen,
-                            // we need to add this currently unused fallback
-                            // to handle any new cases that might be added
-                            // in the future:
                             Image(systemName: "questionmark.circle.fill")
                         }
                     }
-
-//                    (image ?? Image(systemName: "questionmark.circle.fill"))
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .padding()
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(8)
                 }
             )
             .cornerRadius(20)
+    }
+}
+
+extension Image {
+    func centerCropped() -> some View {
+        GeometryReader { geo in
+            self
+                .resizable()
+                .scaledToFill()
+                .frame(width: geo.size.width, height: geo.size.height)
+                .clipped()
+        }
     }
 }
 
