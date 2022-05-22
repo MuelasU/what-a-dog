@@ -27,8 +27,8 @@ struct CharacteristicsRow: View {
                 .padding()
                 .font(.system(size: 20, weight: .medium))
         }
-        .background(CustomColor.WADbeige1)
-        .foregroundColor(CustomColor.WADgreen2)
+        .background(Color("WADbeige1"))
+        .foregroundColor(Color("WADgreen2"))
     }
 }
 
