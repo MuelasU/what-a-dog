@@ -17,7 +17,7 @@ class DogApiService {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
 
-    func setupBreedsListDataTaskPublisher(completion: @escaping ([Dog]) -> Void) {
+    func retrieveDogsData(completion: @escaping ([Dog]) -> Void) {
         URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { data, response in
                 guard let httpResponse = response as? HTTPURLResponse,

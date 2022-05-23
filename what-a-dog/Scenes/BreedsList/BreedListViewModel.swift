@@ -9,17 +9,16 @@ import Combine
 import Foundation
 
 class BreedListViewModel: ObservableObject {
-    @Published var time = ""
     @Published var dogs = [Dog]()
     private var apiService: DogApiService!
 
     init() {
         apiService = DogApiService()
-        callFuncToGetDogsData()
+        getDogsData()
     }
 
-    func callFuncToGetDogsData() {
-        apiService.setupBreedsListDataTaskPublisher(completion: { dogs in
+    func getDogsData() {
+        apiService.retrieveDogsData(completion: { dogs in
             self.dogs = dogs
         })
     }

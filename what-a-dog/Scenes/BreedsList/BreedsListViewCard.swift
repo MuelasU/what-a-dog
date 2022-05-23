@@ -33,14 +33,13 @@ struct BreedsListViewCard: View {
                         case let .success(image):
                             image
                                 .centerCropped()
-
                         case .failure:
                             Image(systemName: "questionmark.circle.fill")
                         @unknown default:
                             Image(systemName: "questionmark.circle.fill")
                         }
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding(8)
                 }
             )
