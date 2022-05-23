@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
-		3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* Button.swift */; };
+		3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* WADButton.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
 		3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7E8282AAC6F004450D0 /* MainApp.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F33F3BA282E83A2002A3BEE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3F33F3BA282E83A2002A3BEE /* WADButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADButton.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3FBCE7E5282AAC6F004450D0 /* what-a-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-a-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +83,7 @@
 		3FA28A89282D296C00DC2FD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F33F3BA282E83A2002A3BEE /* Button.swift */,
+				3F33F3BA282E83A2002A3BEE /* WADButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 				D0309EFF2833CE2A00C5CAE3 /* Modal.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
-				3F33F3BB282E83A2002A3BEE /* Button.swift in Sources */,
+				3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */,
 				3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
