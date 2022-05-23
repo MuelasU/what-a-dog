@@ -24,12 +24,12 @@ import CoreGraphics
 import VideoToolbox
 
 extension CGImage {
-    func toPixelBuffer() -> CVPixelBuffer? {
+    func toPixelBuffer(size: CGSize) -> CVPixelBuffer? {
         var pixelBuffer: CVPixelBuffer?
         let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue,
                      kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
         let status = CVPixelBufferCreate(kCFAllocatorDefault,
-                                         Int(width), Int(height),
+                                         Int(size.width), Int(size.height),
                                          kCVPixelFormatType_32ARGB,
                                          attrs,
                                          &pixelBuffer)
@@ -45,8 +45,8 @@ extension CGImage {
         defer { CVPixelBufferUnlockBaseAddress(pixelBuffer, flags) }
 
         guard let context = CGContext(data: CVPixelBufferGetBaseAddress(pixelBuffer),
-                                      width: width,
-                                      height: height,
+                                      width: Int(size.width),
+                                      height: Int(size.height),
                                       bitsPerComponent: 8,
                                       bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer),
                                       space: CGColorSpaceCreateDeviceRGB(),
@@ -55,7 +55,7 @@ extension CGImage {
             return nil
         }
 
-        context.draw(self, in: CGRect(x: 0, y: 0, width: width, height: height))
+        context.draw(self, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         return pixelBuffer
     }
 }

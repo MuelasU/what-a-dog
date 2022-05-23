@@ -1,37 +1,29 @@
 import Foundation
 
 struct BreedClassification {
-    let probabilities: [String: Double]
+    let probabilities: [(String, Double)]
 
     /// Sort classification by most probable to less probable breeds
-    func sorted() -> BreedClassification {
-        let sorted = probabilities.sorted {
-            $0.value > $1.value
-        }.reduce(into: [:]) {
-            $0[$1.key] = $1.value
+    var sorted: BreedClassification {
+        let sorted = probabilities.sorted { first, second in
+            first.1 > second.1
         }
-
         return BreedClassification(probabilities: sorted)
     }
 
     func getValue(for breed: String) -> Double? {
-        return probabilities[breed]
+        guard let breedValue = probabilities.first(where: { pair in pair.0 == breed }) else {
+            return nil
+        }
+        return breedValue.1
     }
 
-    func slice(to first: Int, from last: Int) -> BreedClassification? {
-        let keyValues = Array(probabilities)
-
-        guard
-            first >= keyValues.startIndex,
-            last <= keyValues.endIndex
-        else {
+    func top(_ num: Int) -> BreedClassification? {
+        guard num < probabilities.count else {
             return nil
         }
 
-        let sliced = keyValues[first ..< last].reduce(into: [:]) {
-            $0[$1.key] = $1.value
-        }
-        return BreedClassification(probabilities: sliced)
+        return BreedClassification(probabilities: Array(probabilities[0 ..< num]))
     }
 
     // formatt ??
