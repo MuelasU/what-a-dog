@@ -22,7 +22,7 @@ struct Modal: View {
                     Image("card_square")
                         .resizable()
                         .scaledToFill()
-                        .cornerRadius(10.0)
+                        .cornerRadius(20.0)
                         .overlay(
                             Image("dog")
                                 .centerCropped()
