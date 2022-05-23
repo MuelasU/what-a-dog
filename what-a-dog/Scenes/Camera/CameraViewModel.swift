@@ -94,7 +94,6 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
         do {
             let breedDetector = try BreedDetector()
             guard let classification = try breedDetector.classify(image: image)
-                .sorted
                 .top(5)?
                 .formatted(fractionDigits: 2)
             else {
