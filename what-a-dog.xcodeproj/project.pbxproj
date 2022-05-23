@@ -13,7 +13,6 @@
 		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
 		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
-		3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* WADButton.swift */; };
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
@@ -21,6 +20,7 @@
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
+		3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* WADButton.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
 		3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7E8282AAC6F004450D0 /* MainApp.swift */; };
@@ -32,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F33F3BA282E83A2002A3BEE /* WADButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADButton.swift; sourceTree = "<group>"; };
 		24A8B11E2835148D0010C57B /* CameraActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraActionButton.swift; sourceTree = "<group>"; };
 		24E73A762833B86300CBA2EC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		24E73A782833BBD900CBA2EC /* TakePictureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButton.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewCard.swift; sourceTree = "<group>"; };
 		31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		31B4801F28353DBB003A74E9 /* BreedsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListView.swift; sourceTree = "<group>"; };
+		3F33F3BA282E83A2002A3BEE /* WADButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADButton.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3FBCE7E5282AAC6F004450D0 /* what-a-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-a-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +84,7 @@
 		24A8B11D283514600010C57B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				3F33F3BA282E83A2002A3BEE /* WADButton.swift */,
 				24E73A782833BBD900CBA2EC /* TakePictureButton.swift */,
 				24A8B11E2835148D0010C57B /* CameraActionButton.swift */,
 			);
@@ -142,7 +143,6 @@
 		3FA28A89282D296C00DC2FD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F33F3BA282E83A2002A3BEE /* WADButton.swift */,
 				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;

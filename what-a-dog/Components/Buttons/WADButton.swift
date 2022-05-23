@@ -14,9 +14,9 @@ struct WADButton: View {
                     .font(Font.custom("SF Pro Rounded", size: 17))
                     .fontWeight(.semibold) // your text
             }
-            .foregroundColor(Color("WADgreen2"))
+            .foregroundColor(Color.Wad.green2)
             .padding()
-            .background(Color("WADgray2"))
+            .background(Color.Wad.gray2)
             .cornerRadius(10)
         }
     }
