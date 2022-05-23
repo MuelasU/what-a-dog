@@ -50,7 +50,7 @@ extension CGImage {
                                       bitsPerComponent: 8,
                                       bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer),
                                       space: CGColorSpaceCreateDeviceRGB(),
-                                      bitmapInfo: alphaInfo.rawValue)
+                                      bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
         else {
             return nil
         }
