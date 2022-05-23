@@ -26,5 +26,11 @@ struct BreedClassification {
         return BreedClassification(probabilities: Array(probabilities[0 ..< num]))
     }
 
-    // formatt ??
+    func formatted(fractionDigits: Int = 1) -> [String] {
+        return probabilities.map { pair in
+            let breed = pair.0
+            let prob = pair.1.toPercentage(fractionDigits: fractionDigits)
+            return "\(breed): \(prob)"
+        }
+    }
 }

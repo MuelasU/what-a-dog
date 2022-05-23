@@ -95,13 +95,14 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
             let breedDetector = try BreedDetector()
             guard let classification = try breedDetector.classify(image: image)
                 .sorted
-                .top(5)
+                .top(5)?
+                .formatted(fractionDigits: 2)
             else {
                 print("Error on handling classification")
                 return
             }
 
-            print(classification.probabilities)
+            print(classification)
         } catch {
             print("Error on classifying image")
             return

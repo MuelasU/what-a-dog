@@ -1,8 +1,8 @@
 import Foundation
 
 extension Double {
-    func toPercentage(fractionDigits: Int = 1) -> String {
+    func toPercentage(fractionDigits: Int) -> String {
         let value = self * 100
-        return String(format: "%.\(fractionDigits)f%", value)
+        return String(format: "%.\(fractionDigits)f%%", value)
     }
 }
