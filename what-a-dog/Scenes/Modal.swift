@@ -32,7 +32,7 @@ struct Modal: View {
                         )
                 }
                 .padding(.all, 16)
-                List{
+                List {
                     ForEach(items, id: \.self) { item in
                         ModalCell(selectedItem: $selectedItem, name: item)
                     }
@@ -45,7 +45,7 @@ struct Modal: View {
                     showingSheet.toggle()
                 }
             }
-            .background(Color("WADgray1"))
+            .background(Color.Wad.gray1)
             .navigationBarTitle(Text("What a dog?"))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(false)
@@ -59,19 +59,19 @@ struct ModalCell: View {
     var body: some View {
         HStack {
             if name == selectedItem {
-                Image(systemName: "checkmark").foregroundColor(Color("WADgreen2"))
+                Image(systemName: "checkmark").foregroundColor(Color.Wad.green2)
             } else {
-                Image(systemName: "checkmark").foregroundColor(Color("WADgray2"))
+                Image(systemName: "checkmark").foregroundColor(Color.Wad.gray2)
             }
-            Text(name).foregroundColor(Color("WADgreen2"))
+            Text(name).foregroundColor(Color.Wad.green2)
             Spacer()
-            Text("20%").foregroundColor(Color("WADgreen2"))
+            Text("20%").foregroundColor(Color.Wad.green2)
                 .font(Font.custom("SF Pro Rounded", size: 17))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.trailing)
         }
         .padding(.all, 8)
-        .listRowBackground(Color("WADgray2"))
+        .listRowBackground(Color.Wad.gray2)
         .onTapGesture {
             self.selectedItem = self.name
         }
