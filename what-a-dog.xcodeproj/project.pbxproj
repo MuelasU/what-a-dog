@@ -16,7 +16,6 @@
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
-		31B4801928353D1B003A74E9 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801828353D1B003A74E9 /* DogImage.swift */; };
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
@@ -141,9 +140,7 @@
 		3FA28A89282D296C00DC2FD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3F33F3BA282E83A2002A3BEE /* Button.swift */,
-				8601286328326D26007A857E /* CardsView.swift */,
-				86328F5D283654C2006B5B1E /* CornerRadius.swift */,
+				86DAE5BA283BA77A00DEA49A /* Cards */,
 				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;
@@ -196,6 +193,15 @@
 				FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86DAE5BA283BA77A00DEA49A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				86328F5D283654C2006B5B1E /* CornerRadius.swift */,
+				8601286328326D26007A857E /* CardsView.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		8F31E54CEAD9591B0F22E5CA /* Pods */ = {
