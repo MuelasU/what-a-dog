@@ -9,30 +9,35 @@ import SwiftUI
 
 struct CameraView: View {
     @StateObject var viewModel = CameraViewModel()
+    @State var selection: Int?
 
     var body: some View {
-        ZStack {
-            CameraPreview(viewModel: viewModel)
-            VStack {
-                Spacer()
-                ActionCameraButtons(viewModel: viewModel)
+        NavigationView {
+            ZStack {
+                CameraPreview(viewModel: viewModel)
+                    .ignoresSafeArea(.all, edges: .all)
+                VStack {
+                    Spacer()
+                    ActionCameraButtons(viewModel: viewModel, selection: $selection)
+                }
+                .padding()
+                .fullScreenCover(isPresented: $viewModel.mustShowImagePicker) {
+                    ImagePickerPreview(viewModel: viewModel)
+                }
+                .fullScreenCover(isPresented: $viewModel.hasSelectedImage) {
+                    ConfirmationView(viewModel: viewModel)
+                }
             }
-            .padding()
-            .fullScreenCover(isPresented: $viewModel.mustShowImagePicker) {
-                ImagePickerPreview(viewModel: viewModel)
+            .onAppear {
+                viewModel.checkForPermission()
             }
-            .fullScreenCover(isPresented: $viewModel.hasSelectedImage) {
-                ConfirmationView(viewModel: viewModel)
-            }
-        }
-        .onAppear {
-            viewModel.checkForPermission()
         }
     }
 }
 
 struct ActionCameraButtons: View {
     @ObservedObject var viewModel: CameraViewModel
+    @Binding var selection: Int?
 
     var body: some View {
         HStack {
@@ -49,11 +54,13 @@ struct ActionCameraButtons: View {
             )
             Spacer()
             Spacer()
-            CameraActionButton(
-                symbol: "square.grid.2x2.fill",
-                action: {},
-                fontSize: 40
-            )
+            NavigationLink(destination: BreedsListView(selection: nil), tag: 1, selection: $selection) {
+                CameraActionButton(
+                    symbol: "square.grid.2x2.fill",
+                    action: { selection = 1 },
+                    fontSize: 40
+                )
+            }
             Spacer()
         }
     }
