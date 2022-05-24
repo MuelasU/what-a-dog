@@ -51,6 +51,7 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
             if session.canAddOutput(output) {
                 session.addOutput(output)
             }
+            session.sessionPreset = .photo
             session.commitConfiguration()
         } catch {
             print("Input da camera não conseguiu ser configurado")
@@ -59,13 +60,12 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
     }
 
     func takePicture() {
-        DispatchQueue.global(qos: .background).async {
-            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-            self.session.stopRunning()
+//        let pixelFormatType = output.availableRawPhotoPixelFormatTypes.first!
+//        output.capturePhoto(with: AVCapturePhotoSettings(rawPixelFormatType: pixelFormatType), delegate: self)
+        output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
 
-            DispatchQueue.main.async {
-                withAnimation { self.isTaken.toggle() }
-            }
+        DispatchQueue.main.async {
+            withAnimation { self.isTaken.toggle() }
         }
     }
 
@@ -78,11 +78,33 @@ class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
         }
     }
 
-    // TODO: Enviar essa imagem pro modelo de machine learning
+    // TODO: Usei isso apenas para demosntração, precisa refatorar
     func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if error != nil {
+        session.stopRunning()
+
+        if let error = error {
+            print("Error on processing the photo: ", error.localizedDescription)
             return
         }
-        guard let imageData = photo.fileDataRepresentation() else { return }
+
+        guard let image = photo.cgImageRepresentation() else {
+            return
+        }
+
+        do {
+            let breedDetector = try BreedDetector()
+            guard let classification = try breedDetector.classify(image: image)
+                .top(5)?
+                .formatted(fractionDigits: 2)
+            else {
+                print("Error on handling classification")
+                return
+            }
+
+            print(classification)
+        } catch {
+            print("Error on classifying image")
+            return
+        }
     }
 }
