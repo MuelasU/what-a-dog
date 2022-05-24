@@ -14,24 +14,22 @@ struct BreedsListView: View {
     @State var selection: Int?
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVGrid(columns: gridItemLayout, spacing: 8) {
-                    ForEach(viewModel.dogs) { dog in
-                        NavigationLink(destination: CardView(breedName: dog.name),
-                                       tag: 2,
-                                       selection: $selection) {
-                            BreedsListViewCard(nome: dog.name, image: nil)
-                                .onTapGesture {
-                                    selection = 2
-                                }
-                        }
+        ScrollView {
+            LazyVGrid(columns: gridItemLayout, spacing: 8) {
+                ForEach(viewModel.dogs) { dog in
+
+                    NavigationLink(destination: CardView(breedName: dog.name), tag: 2, selection: $selection) {
+                        BreedsListViewCard(nome: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)
+                            .onTapGesture {
+                                selection = 2
+                            }
                     }
                 }
-                .padding([.leading, .trailing])
-            }.navigationTitle("Collection")
-                .navigationBarTitleDisplayMode(.large)
+            }
+            .padding([.leading, .trailing])
         }
+        .navigationTitle("Collection")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

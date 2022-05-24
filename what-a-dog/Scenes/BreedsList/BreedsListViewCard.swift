@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BreedsListViewCard: View {
     @State var nome: String?
-    @State var image: Image?
+    @State var imageURL: URL?
 
     var body: some View {
         Image("card_collection_green")
@@ -17,16 +17,30 @@ struct BreedsListViewCard: View {
             .aspectRatio(contentMode: .fit)
             .overlay(
                 VStack {
-                    Text(nome ?? "Test")
-                        .foregroundColor(.white)
-                        .bold()
-                        .padding()
-                        .lineLimit(1)
+                    HStack {
+                        Text(nome ?? "Test")
+                            .foregroundColor(.white)
+                            .bold()
+                            .padding([.leading, .trailing, .top], 8)
+                            .lineLimit(1)
+                        Spacer()
+                    }
                     Spacer()
-                    (image ?? Image(systemName: "questionmark.circle.fill"))
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
+                    AsyncImage(url: imageURL) { phase in
+                        switch phase {
+                        case .empty:
+                            Image(systemName: "questionmark.circle.fill")
+                        case let .success(image):
+                            image
+                                .centerCropped()
+                        case .failure:
+                            Image(systemName: "questionmark.circle.fill")
+                        @unknown default:
+                            Image(systemName: "questionmark.circle.fill")
+                        }
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(8)
                 }
             )
             .cornerRadius(20)
