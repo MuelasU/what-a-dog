@@ -17,6 +17,7 @@
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
+		31B4801928353D1B003A74E9 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801828353D1B003A74E9 /* DogImage.swift */; };
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
@@ -349,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B4801928353D1B003A74E9 /* DogImage.swift in Sources */,
 				8601286428326D26007A857E /* CardsView.swift in Sources */,
 				86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,

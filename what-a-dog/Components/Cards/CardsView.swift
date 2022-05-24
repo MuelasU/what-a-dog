@@ -70,7 +70,7 @@ struct ARButton: View {
 }
 
 struct CardView: View {
-    var breedName: String = "Salsicha"
+    var breedName: String?
     var imageName: String = "largeDog"
     var dogValues = [DogsStruct(name: "Size", value: 2),
                      DogsStruct(name: "Weight", value: 1),
@@ -96,7 +96,7 @@ struct CardView: View {
 
             ARButton()
         }
-        .navigationTitle(breedName)
+        .navigationTitle(breedName ?? "")
     }
 }
 
