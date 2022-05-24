@@ -53,19 +53,27 @@ struct DogCharacteristics: View {
 }
 
 struct ARButton: View {
-    var body: some View {
-        HStack(spacing: 10) {
-            Image("logo-apple-ar")
-                .resizable()
-                .frame(width: 30, height: 30, alignment: .center)
-                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 2))
+    @State var selection: Int?
 
-            Text("See in AR")
-                .foregroundColor(Color("WADgreen2"))
-                .padding(EdgeInsets(top: 8, leading: 2, bottom: 8, trailing: 16))
+    var body: some View {
+        NavigationLink(destination: ZStack { NavigationIndicator() },
+                       tag: 3,
+                       selection: $selection) {
+            HStack(spacing: 10) {
+                Image("logo-apple-ar")
+                    .resizable()
+                    .frame(width: 30, height: 30, alignment: .center)
+                    .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 2))
+
+                Text("See in AR")
+                    .foregroundColor(Color("WADgreen2"))
+                    .padding(EdgeInsets(top: 8, leading: 2, bottom: 8, trailing: 16))
+            }.onTapGesture {
+                selection = 3
+            }
+            .background(Color("WADgray2"))
+            .cornerRadius(10)
         }
-        .background(Color("WADgray2"))
-        .cornerRadius(10)
     }
 }
 
@@ -116,4 +124,14 @@ extension Image {
                 .clipped()
         }
     }
+}
+
+struct NavigationIndicator: UIViewControllerRepresentable {
+    typealias UIViewControllerType = ARView
+
+    func makeUIViewController(context _: Context) -> ARView {
+        return ARView()
+    }
+
+    func updateUIViewController(_: ARView, context _: Context) {}
 }

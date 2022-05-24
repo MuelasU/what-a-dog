@@ -27,8 +27,9 @@ struct BreedsListView: View {
                                 }
                         }
                     }
-                }
-                .padding([.leading, .trailing])
+
+                }.padding([.leading, .trailing])
+
             }.navigationTitle("Collection")
                 .navigationBarTitleDisplayMode(.large)
         }
