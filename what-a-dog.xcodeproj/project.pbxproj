@@ -102,6 +102,16 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		31B4801A28353D62003A74E9 /* BreedsList */ = {
+			isa = PBXGroup;
+			children = (
+				31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */,
+				31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */,
+				31B4801F28353DBB003A74E9 /* BreedsListView.swift */,
+			);
+			path = BreedsList;
+			sourceTree = "<group>";
+		};
 		3F85587528366B7C005BABBE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,16 +129,6 @@
 				3F85587B28368CE8005BABBE /* BreedClassification.swift */,
 			);
 			path = ML;
-			sourceTree = "<group>";
-		};
-		31B4801A28353D62003A74E9 /* BreedsList */ = {
-			isa = PBXGroup;
-			children = (
-				31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */,
-				31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */,
-				31B4801F28353DBB003A74E9 /* BreedsListView.swift */,
-			);
-			path = BreedsList;
 			sourceTree = "<group>";
 		};
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
