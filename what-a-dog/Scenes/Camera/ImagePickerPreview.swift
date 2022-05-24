@@ -26,7 +26,6 @@ struct ImagePickerPreview: UIViewControllerRepresentable {
 
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @ObservedObject var viewModel: CameraViewModel
-    @Environment(\.presentationMode) var presentationMode
 
     init(viewModel: ObservedObject<CameraViewModel>) {
         _viewModel = viewModel
@@ -39,11 +38,9 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
         viewModel.selectedImage = unwrapImage
         viewModel.mustShowImagePicker = false
         viewModel.hasSelectedImage = true
-        presentationMode.wrappedValue.dismiss()
     }
 
     func imagePickerControllerDidCancel(_: UIImagePickerController) {
         viewModel.mustShowImagePicker = false
-        presentationMode.wrappedValue.dismiss()
     }
 }

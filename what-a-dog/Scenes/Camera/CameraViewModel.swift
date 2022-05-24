@@ -8,17 +8,16 @@
 import AVFoundation
 import SwiftUI
 
-class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
+class CameraViewModel: NSObject, ObservableObject {
     @Published var hasSelectedImage = false
     @Published var selectedImage: UIImage!
     @Published var mustShowImagePicker = false
-    @Published var preview: AVCaptureVideoPreviewLayer!
 
     var session = AVCaptureSession()
     var output = AVCapturePhotoOutput()
 }
 
-extension CameraViewModel {
+extension CameraViewModel: AVCapturePhotoCaptureDelegate {
     func checkForPermission() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
