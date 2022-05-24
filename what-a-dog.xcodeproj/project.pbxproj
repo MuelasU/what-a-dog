@@ -16,7 +16,6 @@
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
-		31B4801928353D1B003A74E9 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801828353D1B003A74E9 /* DogImage.swift */; };
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
@@ -32,6 +31,8 @@
 		3FBCE7ED282AAC71004450D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EC282AAC71004450D0 /* Assets.xcassets */; };
 		3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EF282AAC71004450D0 /* Preview Assets.xcassets */; };
 		3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7F6282AAD2A004450D0 /* .gitignore */; };
+		8601286428326D26007A857E /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601286328326D26007A857E /* CardsView.swift */; };
+		86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86328F5D283654C2006B5B1E /* CornerRadius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		3FBCE7F6282AAD2A004450D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
+		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		86328F5D283654C2006B5B1E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +170,7 @@
 		3FA28A89282D296C00DC2FD8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				86DAE5BA283BA77A00DEA49A /* Cards */,
 				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;
@@ -220,6 +224,15 @@
 				FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86DAE5BA283BA77A00DEA49A /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				86328F5D283654C2006B5B1E /* CornerRadius.swift */,
+				8601286328326D26007A857E /* CardsView.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		8F31E54CEAD9591B0F22E5CA /* Pods */ = {
@@ -367,6 +380,8 @@
 				3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */,
 				3F855874283667BD005BABBE /* BreedClassifier.mlmodel in Sources */,
 				31B4801928353D1B003A74E9 /* DogImage.swift in Sources */,
+				8601286428326D26007A857E /* CardsView.swift in Sources */,
+				86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
