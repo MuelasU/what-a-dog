@@ -9,10 +9,10 @@ import AVFoundation
 import SwiftUI
 
 class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
-    @Published var hasTakenPhoto = false
+    @Published var hasSelectedImage = false
+    @Published var selectedImage: UIImage!
     @Published var mustShowImagePicker = false
-    @Published var hasSelectedPhoto = false
-    @Published var selectedImage: Image?
+    @Published var preview: AVCaptureVideoPreviewLayer!
 
     var session = AVCaptureSession()
     var output = AVCapturePhotoOutput()
@@ -65,28 +65,16 @@ extension CameraViewModel {
     func takePicture() {
         DispatchQueue.global(qos: .background).async {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-            self.session.stopRunning()
-
-            DispatchQueue.main.async {
-                withAnimation { self.hasTakenPhoto.toggle() }
-            }
         }
     }
 
-    func reTakePicture() {
-        DispatchQueue.global(qos: .background).async {
-            self.session.startRunning()
-            DispatchQueue.main.async {
-                withAnimation { self.hasTakenPhoto.toggle() }
-            }
-        }
-    }
-
-    // TODO: Enviar essa imagem pro modelo de machine learning
     func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if error != nil {
             return
         }
+
         guard let imageData = photo.fileDataRepresentation() else { return }
+        selectedImage = UIImage(data: imageData)
+        hasSelectedImage = true
     }
 }

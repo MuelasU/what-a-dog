@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24247D4E283BA72A001622F2 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24247D4D283BA72A001622F2 /* ConfirmationView.swift */; };
 		24A8B11F2835148D0010C57B /* CameraActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8B11E2835148D0010C57B /* CameraActionButton.swift */; };
 		24A8B123283522AF0010C57B /* ImagePickerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8B122283522AF0010C57B /* ImagePickerPreview.swift */; };
 		24E73A772833B86300CBA2EC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A762833B86300CBA2EC /* CameraView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24247D4D283BA72A001622F2 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		24A8B11E2835148D0010C57B /* CameraActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraActionButton.swift; sourceTree = "<group>"; };
 		24A8B122283522AF0010C57B /* ImagePickerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPreview.swift; sourceTree = "<group>"; };
 		24E73A762833B86300CBA2EC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */,
 				24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */,
 				24A8B122283522AF0010C57B /* ImagePickerPreview.swift */,
+				24247D4D283BA72A001622F2 /* ConfirmationView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24247D4E283BA72A001622F2 /* ConfirmationView.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,

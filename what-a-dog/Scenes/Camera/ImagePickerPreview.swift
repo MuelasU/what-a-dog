@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct ImagePickerPreview: UIViewControllerRepresentable {
-    @Binding var hasSelectedImage: Bool
-    @Binding var selectedImage: Image?
     @ObservedObject var viewModel: CameraViewModel
 
     func makeCoordinator() -> Coordinator {
-        return Coordinator(hasSelectedImage: $hasSelectedImage, selectedImage: $selectedImage, isShown: _viewModel)
+        return Coordinator(viewModel: _viewModel)
     }
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerPreview>) -> UIImagePickerController {
@@ -27,28 +25,25 @@ struct ImagePickerPreview: UIViewControllerRepresentable {
 }
 
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    @Binding var hasSelectedImage: Bool
-    @Binding var selectedImage: Image?
-    @ObservedObject var isCoordinatorShown: CameraViewModel
+    @ObservedObject var viewModel: CameraViewModel
+    @Environment(\.presentationMode) var presentationMode
 
-    init(hasSelectedImage: Binding<Bool>, selectedImage: Binding<Image?>, isShown: ObservedObject<CameraViewModel>) {
-        _hasSelectedImage = hasSelectedImage
-        _selectedImage = selectedImage
-        _isCoordinatorShown = isShown
+    init(viewModel: ObservedObject<CameraViewModel>) {
+        _viewModel = viewModel
     }
 
     func imagePickerController(_: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any])
     {
         guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        isCoordinatorShown.selectedImage = Image(uiImage: unwrapImage)
-        isCoordinatorShown.mustShowImagePicker = false
-        isCoordinatorShown.hasSelectedPhoto = true
-        selectedImage = Image(uiImage: unwrapImage)
-        hasSelectedImage = true
+        viewModel.selectedImage = unwrapImage
+        viewModel.mustShowImagePicker = false
+        viewModel.hasSelectedImage = true
+        presentationMode.wrappedValue.dismiss()
     }
 
     func imagePickerControllerDidCancel(_: UIImagePickerController) {
-        isCoordinatorShown.mustShowImagePicker = false
+        viewModel.mustShowImagePicker = false
+        presentationMode.wrappedValue.dismiss()
     }
 }

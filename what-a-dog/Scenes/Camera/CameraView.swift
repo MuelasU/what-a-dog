@@ -8,25 +8,21 @@
 import SwiftUI
 
 struct CameraView: View {
-    @Binding var hasSelectedImage: Bool
-    @Binding var selectedImage: Image?
     @StateObject var viewModel = CameraViewModel()
 
     var body: some View {
         ZStack {
             CameraPreview(viewModel: viewModel)
-                .ignoresSafeArea(.all, edges: .all)
             VStack {
                 Spacer()
-                if viewModel.hasTakenPhoto {
-                    UseOrDoNotUseImageButtons(viewModel: viewModel)
-                } else {
-                    ActionCameraButtons(viewModel: viewModel)
-                }
+                ActionCameraButtons(viewModel: viewModel)
             }
             .padding()
-            if viewModel.mustShowImagePicker {
-                ImagePickerPreview(hasSelectedImage: $hasSelectedImage, selectedImage: $selectedImage, viewModel: viewModel)
+            .fullScreenCover(isPresented: $viewModel.mustShowImagePicker) {
+                ImagePickerPreview(viewModel: viewModel)
+            }
+            .fullScreenCover(isPresented: $viewModel.hasSelectedImage) {
+                ConfirmationView(viewModel: viewModel)
             }
         }
         .onAppear {
@@ -35,31 +31,8 @@ struct CameraView: View {
     }
 }
 
-struct UseOrDoNotUseImageButtons: View {
-    @StateObject var viewModel: CameraViewModel
-
-    var body: some View {
-        HStack {
-            Spacer()
-            CameraActionButton(
-                symbol: "x.circle.fill",
-                action: { viewModel.reTakePicture() },
-                fontSize: 60
-            )
-            Spacer()
-            Spacer()
-            CameraActionButton(
-                symbol: "checkmark.circle.fill",
-                action: {},
-                fontSize: 60
-            )
-            Spacer()
-        }
-    }
-}
-
 struct ActionCameraButtons: View {
-    @StateObject var viewModel: CameraViewModel
+    @ObservedObject var viewModel: CameraViewModel
 
     var body: some View {
         HStack {
@@ -86,8 +59,8 @@ struct ActionCameraButtons: View {
     }
 }
 
-// struct CameraView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CameraView(hasSelectedImage: )
-//    }
-// }
+struct CameraView_Previews: PreviewProvider {
+    static var previews: some View {
+        CameraView()
+    }
+}
