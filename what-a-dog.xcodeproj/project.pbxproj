@@ -13,15 +13,22 @@
 		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
 		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
 		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
+		31482917283BB1D8001E839D /* DogsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31482916283BB1D8001E839D /* DogsApiService.swift */; };
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
+		31B4801928353D1B003A74E9 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801828353D1B003A74E9 /* DogImage.swift */; };
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
 		3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* WADButton.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
+		3F73CFC228357F7B009F8AEF /* BreedDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F73CFC128357F7B009F8AEF /* BreedDetector.swift */; };
+		3F855874283667BD005BABBE /* BreedClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3F855873283667BD005BABBE /* BreedClassifier.mlmodel */; };
+		3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */; };
+		3F85587928368781005BABBE /* Double+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587828368781005BABBE /* Double+Percentage.swift */; };
+		3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587B28368CE8005BABBE /* BreedClassification.swift */; };
 		3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7E8282AAC6F004450D0 /* MainApp.swift */; };
 		3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EA282AAC6F004450D0 /* ContentView.swift */; };
 		3FBCE7ED282AAC71004450D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EC282AAC71004450D0 /* Assets.xcassets */; };
@@ -38,6 +45,7 @@
 		24E73A782833BBD900CBA2EC /* TakePictureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButton.swift; sourceTree = "<group>"; };
 		24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		31482916283BB1D8001E839D /* DogsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsApiService.swift; sourceTree = "<group>"; };
 		31B4801228353CB9003A74E9 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		31B4801428353CD6003A74E9 /* DogHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogHeight.swift; sourceTree = "<group>"; };
 		31B4801628353CF3003A74E9 /* DogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogWeight.swift; sourceTree = "<group>"; };
@@ -48,6 +56,11 @@
 		3F33F3BA282E83A2002A3BEE /* WADButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADButton.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3F73CFC128357F7B009F8AEF /* BreedDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetector.swift; sourceTree = "<group>"; };
+		3F855873283667BD005BABBE /* BreedClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BreedClassifier.mlmodel; sourceTree = "<group>"; };
+		3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		3F85587828368781005BABBE /* Double+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Percentage.swift"; sourceTree = "<group>"; };
+		3F85587B28368CE8005BABBE /* BreedClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedClassification.swift; sourceTree = "<group>"; };
 		3FBCE7E5282AAC6F004450D0 /* what-a-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-a-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBCE7E8282AAC6F004450D0 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		3FBCE7EA282AAC6F004450D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,9 +117,29 @@
 			path = BreedsList;
 			sourceTree = "<group>";
 		};
+		3F85587528366B7C005BABBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */,
+				3F85587828368781005BABBE /* Double+Percentage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3F85587A28368CC4005BABBE /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				3F855873283667BD005BABBE /* BreedClassifier.mlmodel */,
+				3F73CFC128357F7B009F8AEF /* BreedDetector.swift */,
+				3F85587B28368CE8005BABBE /* BreedClassification.swift */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F85587A28368CC4005BABBE /* ML */,
 				3FA28A86282D277500DC2FD8 /* API */,
 				31B4801228353CB9003A74E9 /* Dog.swift */,
 				31B4801428353CD6003A74E9 /* DogHeight.swift */,
@@ -120,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3F33F3BE282E841D002A3BEE /* Request.swift */,
+				31482916283BB1D8001E839D /* DogsApiService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -174,6 +208,7 @@
 		3FBCE7E7282AAC6F004450D0 /* what-a-dog */ = {
 			isa = PBXGroup;
 			children = (
+				3F85587528366B7C005BABBE /* Helpers */,
 				3FA28A89282D296C00DC2FD8 /* Components */,
 				3FA28A88282D282D00DC2FD8 /* Scenes */,
 				3FA28A87282D281900DC2FD8 /* Style */,
@@ -352,20 +387,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */,
+				3F855874283667BD005BABBE /* BreedClassifier.mlmodel in Sources */,
+				31B4801928353D1B003A74E9 /* DogImage.swift in Sources */,
 				8601286428326D26007A857E /* CardsView.swift in Sources */,
 				86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				D0309EFF2833CE2A00C5CAE3 /* Modal.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
+				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */,
+				3F85587928368781005BABBE /* Double+Percentage.swift in Sources */,
 				24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */,
 				24E73A772833B86300CBA2EC /* CameraView.swift in Sources */,
 				24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */,
 				3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */,
+				3F73CFC228357F7B009F8AEF /* BreedDetector.swift in Sources */,
 				31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */,
 				31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */,
 				31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */,
+				31482917283BB1D8001E839D /* DogsApiService.swift in Sources */,
 				31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */,
 				31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */,
 				24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */,
@@ -500,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = DV562Y5Y34;
+				DEVELOPMENT_TEAM = P952S3W7DW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
@@ -531,7 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = DV562Y5Y34;
+				DEVELOPMENT_TEAM = P952S3W7DW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
