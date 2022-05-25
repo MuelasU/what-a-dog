@@ -17,8 +17,8 @@ struct BreedsListView: View {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {
                 ForEach(viewModel.dogs) { dog in
 
-                    NavigationLink(destination: CardView(breedName: dog.name)) {
-                        BreedsListViewCard(nome: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)
+                    NavigationLink(destination: CardView(name: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)) {
+                        BreedsListViewCard(name: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)
                     }
                     .buttonStyle(PlainButtonStyle())
                 }

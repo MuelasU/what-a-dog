@@ -11,7 +11,7 @@ class BreedDetector {
         configuration.computeUnits = .all
         classifier = try BreedClassifier(configuration: configuration)
     }
-    
+
     /// Apply the classification algorithm for the requested `image`. Returns the result as a ``BreedClassification`` structure
     func classify(image: CGImage) throws -> BreedClassification {
         guard let buffer = image.toPixelBuffer(size: inputSize) else {

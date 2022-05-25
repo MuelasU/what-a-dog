@@ -70,8 +70,8 @@ struct ARButton: View {
 }
 
 struct CardView: View {
-    var breedName: String?
-    var imageName: String = "largeDog"
+    var name: String?
+    var imageURL: URL?
     var dogValues = [DogsStruct(name: "Size", value: 2),
                      DogsStruct(name: "Weight", value: 1),
                      DogsStruct(name: "Aggressiveness", value: 16),
@@ -85,18 +85,34 @@ struct CardView: View {
                 .cornerRadius(20)
                 .overlay(
                     VStack {
-                        Image(imageName)
-                            .centerCropped()
-                            .cornerRadius(10)
-                            .padding(16)
-                            .clipped()
+//                        Image(imageName)
+//                            .centerCropped()
+//                            .cornerRadius(10)
+//                            .padding(16)
+//                            .clipped()
+                        AsyncImage(url: imageURL) { phase in
+                            switch phase {
+                            case .empty:
+                                Image(systemName: "questionmark.circle.fill")
+                            case let .success(image):
+                                image
+                                    .centerCropped()
+                            case .failure:
+                                Image(systemName: "questionmark.circle.fill")
+                            @unknown default:
+                                Image(systemName: "questionmark.circle.fill")
+                            }
+                        }
+                        .cornerRadius(10)
+                        .padding(16)
+                        .clipped()
                         DogCharacteristics(dogValues: dogValues).padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
 
             ARButton()
         }
-        .navigationTitle(breedName ?? "")
+        .navigationTitle(name ?? "")
     }
 }
 
