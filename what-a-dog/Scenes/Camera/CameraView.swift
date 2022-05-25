@@ -21,7 +21,7 @@ struct CameraView: View {
                     ActionCameraButtons(viewModel: viewModel, selection: $selection)
                 }
                 .padding()
-                .fullScreenCover(isPresented: $viewModel.mustShowImagePicker) {
+                .fullScreenCover(isPresented: $viewModel.isShowingImagePicker) {
                     ImagePickerPreview(viewModel: viewModel)
                 }
                 .fullScreenCover(isPresented: $viewModel.hasSelectedImage) {
@@ -29,7 +29,7 @@ struct CameraView: View {
                 }
             }
             .onAppear {
-                viewModel.checkForPermission()
+                viewModel.setUpCamera()
             }
         }
     }
@@ -44,7 +44,7 @@ struct ActionCameraButtons: View {
             Spacer()
             CameraActionButton(
                 symbol: "photo.fill",
-                action: { viewModel.mustShowImagePicker = true },
+                action: { viewModel.isShowingImagePicker = true },
                 fontSize: 40
             )
             Spacer()

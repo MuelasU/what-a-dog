@@ -35,12 +35,10 @@ class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerContro
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any])
     {
         guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        viewModel.selectedImage = unwrapImage
-        viewModel.mustShowImagePicker = false
-        viewModel.hasSelectedImage = true
+        viewModel.backFromImagePicker(hasSelectedImage: true, image: unwrapImage)
     }
 
     func imagePickerControllerDidCancel(_: UIImagePickerController) {
-        viewModel.mustShowImagePicker = false
+        viewModel.backFromImagePicker(hasSelectedImage: false, image: nil)
     }
 }

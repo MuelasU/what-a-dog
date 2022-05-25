@@ -19,14 +19,14 @@ struct ConfirmationView: View {
                 .scaledToFit()
             VStack {
                 Spacer()
-                UseOrDoNotUseImageButton(viewModel: viewModel)
+                ConfirmationButtons(viewModel: viewModel)
             }
             .padding()
         }
     }
 }
 
-struct UseOrDoNotUseImageButton: View {
+struct ConfirmationButtons: View {
     @ObservedObject var viewModel: CameraViewModel
     @Environment(\.presentationMode) var presentationMode
 
@@ -37,7 +37,6 @@ struct UseOrDoNotUseImageButton: View {
                 symbol: "x.circle.fill",
                 action: {
                     presentationMode.wrappedValue.dismiss()
-                    viewModel.session.startRunning()
                 },
                 fontSize: 60
             )
