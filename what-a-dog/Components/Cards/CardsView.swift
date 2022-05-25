@@ -85,11 +85,6 @@ struct CardView: View {
                 .cornerRadius(20)
                 .overlay(
                     VStack {
-//                        Image(imageName)
-//                            .centerCropped()
-//                            .cornerRadius(10)
-//                            .padding(16)
-//                            .clipped()
                         AsyncImage(url: imageURL) { phase in
                             switch phase {
                             case .empty:
