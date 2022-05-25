@@ -7,47 +7,59 @@
 
 import SwiftUI
 
-struct DogsStruct {
-    let id = UUID()
-    let name: String
-    let value: Int
-}
-
 struct CharacteristicsRow: View {
-    var name: String
-    var value: Int
+    var characteristic: String?
+    var value: String?
+    var isMultiline: Bool
 
     var body: some View {
-        HStack {
-            Text(name)
-                .padding()
-                .font(.system(size: 20, weight: .medium))
-            Spacer()
-            Text(String(value))
-                .padding()
-                .font(.system(size: 20, weight: .medium))
+        if isMultiline {
+            VStack {
+                HStack {
+                    Text(characteristic ?? "")
+                        .padding([.leading, .trailing, .top])
+                        .font(.system(size: 20, weight: .medium))
+                    Spacer()
+                }
+                HStack {
+                    Text(String(value ?? ""))
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding([.leading, .trailing, .bottom])
+                        .font(.system(size: 16, weight: .medium))
+                    Spacer()
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .background(Color("WADbeige1"))
+            .foregroundColor(Color("WADgreen2"))
+        } else {
+            HStack {
+                Text(characteristic ?? "")
+                    .padding()
+                    .font(.system(size: 20, weight: .medium))
+                Spacer()
+                Text(String(value ?? ""))
+                    .padding()
+                    .font(.system(size: 20, weight: .medium))
+            }
+            .background(Color("WADbeige1"))
+            .foregroundColor(Color("WADgreen2"))
         }
-        .background(Color("WADbeige1"))
-        .foregroundColor(Color("WADgreen2"))
     }
 }
 
-struct DogCharacteristics: View {
-    let dogValues: [DogsStruct]!
+struct DogCharacteristicsTable: View {
+    let characteristics = ["Height", "Weight", "Temperament", "Origin"]
+    let characteristicsValues: [String]
 
     var body: some View {
         VStack(spacing: 1) {
-            ForEach(0 ..< 4) { iterator in
-                if iterator == 0 {
-                    CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
-                        .cornerRadius(radius: 10, corners: [.topLeft, .topRight])
-                } else if iterator == 3 {
-                    CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
-                        .cornerRadius(radius: 10, corners: [.bottomLeft, .bottomRight])
-                } else {
-                    CharacteristicsRow(name: dogValues[iterator].name, value: dogValues[iterator].value)
-                }
-            }
+            CharacteristicsRow(characteristic: characteristics[0], value: characteristicsValues[0] + " cm", isMultiline: false)
+                .cornerRadius(radius: 10, corners: [.topLeft, .topRight])
+            CharacteristicsRow(characteristic: characteristics[1], value: characteristicsValues[1], isMultiline: false)
+            CharacteristicsRow(characteristic: characteristics[2], value: characteristicsValues[2], isMultiline: true)
+            CharacteristicsRow(characteristic: characteristics[3], value: characteristicsValues[3], isMultiline: true)
+                .cornerRadius(radius: 10, corners: [.bottomLeft, .bottomRight])
         }
     }
 }
@@ -72,10 +84,10 @@ struct ARButton: View {
 struct CardView: View {
     var name: String?
     var imageURL: URL?
-    var dogValues = [DogsStruct(name: "Size", value: 2),
-                     DogsStruct(name: "Weight", value: 1),
-                     DogsStruct(name: "Aggressiveness", value: 16),
-                     DogsStruct(name: "Obedience", value: 2)]
+    var height: String?
+    var weight: String?
+    var temperament: String?
+    var origin: String?
 
     var body: some View {
         VStack {
@@ -101,7 +113,11 @@ struct CardView: View {
                         .cornerRadius(10)
                         .padding(16)
                         .clipped()
-                        DogCharacteristics(dogValues: dogValues).padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+                        DogCharacteristicsTable(characteristicsValues: [height ?? "",
+                                                                        weight ?? "",
+                                                                        temperament ?? "",
+                                                                        origin ?? ""])
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
 
