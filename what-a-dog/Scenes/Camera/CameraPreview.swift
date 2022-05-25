@@ -13,10 +13,8 @@ struct CameraPreview: UIViewRepresentable {
 
     func makeUIView(context _: Context) -> UIView {
         viewModel.injectDependency(device: CameraService())
-        if let cameraService = viewModel.cameraService {
-            return cameraService.getView()
-        }
-        return UIView()
+        guard let cameraService = viewModel.cameraService else { return UIView() }
+        return cameraService.getView()
     }
 
     func updateUIView(_: UIView, context _: Context) {}
