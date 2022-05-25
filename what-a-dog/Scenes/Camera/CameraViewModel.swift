@@ -80,7 +80,7 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
         guard let image = photo.cgImageRepresentation() else {
             return
         }
-        
+
         selectedImage = UIImage(cgImage: image)
         hasSelectedImage = true
 

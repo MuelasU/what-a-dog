@@ -35,7 +35,10 @@ struct UseOrDoNotUseImageButton: View {
             Spacer()
             CameraActionButton(
                 symbol: "x.circle.fill",
-                action: { presentationMode.wrappedValue.dismiss() },
+                action: {
+                    presentationMode.wrappedValue.dismiss()
+                    viewModel.session.startRunning()
+                },
                 fontSize: 60
             )
             Spacer()
