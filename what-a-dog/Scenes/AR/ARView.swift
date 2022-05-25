@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 
 class ARView: UIViewController, ARSCNViewDelegate {
+    var dogList = [SCNNode]()
+
     var arView: ARSCNView {
         return (self.view as? ARSCNView)!
     }
@@ -22,23 +24,7 @@ class ARView: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         arView.delegate = self
         arView.scene = SCNScene()
-        // arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-
-        let dogScene = SCNScene(named: "Doguinho.scn")
-        let jellyScene = SCNScene(named: "Jellyfish.scn")
-
-        if let jellyNode = jellyScene?.rootNode.childNode(withName: "Sphere", recursively: true) {
-            jellyNode.position = SCNVector3(0, 0, -10)
-            arView.scene.rootNode.addChildNode(jellyNode)
-            arView.autoenablesDefaultLighting = true
-        }
-
-        if let dogNode = dogScene?.rootNode.childNode(withName: "Doguinho_low_poly", recursively: true) {
-            dogNode.scale = SCNVector3(0.25, 0.25, 0.25)
-            dogNode.position = SCNVector3(10, 0, -10)
-            arView.scene.rootNode.addChildNode(dogNode)
-            arView.autoenablesDefaultLighting = true
-        }
+        arView.autoenablesDefaultLighting = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -60,6 +46,55 @@ class ARView: UIViewController, ARSCNViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         arView.session.pause()
+    }
+
+    override func motionEnded(_: UIEvent.EventSubtype, with _: UIEvent?) {
+        arView.scene.removeAllParticleSystems()
+        dogList.map { $0.removeFromParentNode() }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: arView)
+            let results = arView.hitTest(touchLocation, types: .existingPlaneUsingExtent)
+            if let hitResult = results.first {
+                let vector = SCNVector3(hitResult.worldTransform.columns.3.x, hitResult.worldTransform.columns.3.y, hitResult.worldTransform.columns.3.z)
+                placeDog(position: vector)
+            }
+        }
+    }
+
+    func placeDog(position: SCNVector3) {
+        let dogScene = SCNScene(named: "Doguinho.scn")
+
+        if let dogNode = dogScene?.rootNode.childNode(withName: "Doguinho_low_poly", recursively: true) {
+            dogNode.scale = SCNVector3(0.02, 0.02, 0.02)
+            dogList.append(dogNode)
+            dogNode.position = SCNVector3(position.x, position.y + dogNode.boundingSphere.radius / 100, position.z)
+            arView.scene.rootNode.addChildNode(dogNode)
+            AudioManager.shared.playBark()
+            dogNode.runAction(SCNAction.rotateBy(x: CGFloat(Float.pi * 10), y: 0, z: 0, duration: 0.5))
+        }
+    }
+
+    func renderer(_: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        if anchor is ARPlaneAnchor {
+            let planeAnchor = (anchor as? ARPlaneAnchor)!
+            let plane = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+
+            let planeNode = SCNNode()
+            planeNode.position = SCNVector3(planeAnchor.center.x, 0, planeAnchor.center.z)
+            planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2, 1, 0, 0)
+
+            let clearMaterial = SCNMaterial()
+            clearMaterial.diffuse.contents = UIColor.clear
+            plane.materials = [clearMaterial]
+
+            planeNode.geometry = plane
+            node.addChildNode(planeNode)
+        } else {
+            return
+        }
     }
 }
 
