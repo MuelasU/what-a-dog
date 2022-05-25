@@ -8,13 +8,13 @@
 import Foundation
 
 struct Dog: Decodable, Identifiable {
-//    var weight: DogWeight
-//    var height: DogHeight
+    var weight: DogWeight?
+    var height: DogHeight?
     var id: Int
     var name: String
-//    var bredFor: String
-//    var breedGroup: String
-//    var lifeSpan: String
-//    var temperament: String
-//    var image: DogImage
+    var bredFor: String?
+    var breedGroup: String?
+    var lifeSpan: String?
+    var temperament: String?
+    var image: DogImage?
 }
