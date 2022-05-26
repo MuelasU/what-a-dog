@@ -18,14 +18,14 @@ struct CharacteristicsRow: View {
                 HStack {
                     Text(characteristic ?? "")
                         .padding([.leading, .trailing, .top])
-                        .font(.system(size: 20, weight: .medium))
+                        .font(.system(size: 20, weight: .bold))
                     Spacer()
                 }
                 HStack {
                     Text(String(value ?? ""))
                         .fixedSize(horizontal: false, vertical: true)
                         .padding([.leading, .trailing, .bottom])
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.system(size: 18, weight: .medium))
                     Spacer()
                 }
             }
@@ -36,11 +36,11 @@ struct CharacteristicsRow: View {
             HStack {
                 Text(characteristic ?? "")
                     .padding()
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.system(size: 20, weight: .bold))
                 Spacer()
                 Text(String(value ?? ""))
                     .padding()
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.system(size: 18, weight: .medium))
             }
             .background(Color("WADbeige1"))
             .foregroundColor(Color("WADgreen2"))
@@ -49,16 +49,24 @@ struct CharacteristicsRow: View {
 }
 
 struct DogCharacteristicsTable: View {
-    let characteristics = ["Height", "Weight", "Temperament", "Origin"]
+    let characteristics = ["Height", "Weight", "Temperament", "Bred For"]
     let characteristicsValues: [String]
 
     var body: some View {
         VStack(spacing: 1) {
-            CharacteristicsRow(characteristic: characteristics[0], value: characteristicsValues[0] + " cm", isMultiline: false)
+            CharacteristicsRow(characteristic: characteristics[0],
+                               value: characteristicsValues[0] + " cm",
+                               isMultiline: false)
                 .cornerRadius(radius: 10, corners: [.topLeft, .topRight])
-            CharacteristicsRow(characteristic: characteristics[1], value: characteristicsValues[1], isMultiline: false)
-            CharacteristicsRow(characteristic: characteristics[2], value: characteristicsValues[2], isMultiline: true)
-            CharacteristicsRow(characteristic: characteristics[3], value: characteristicsValues[3], isMultiline: true)
+            CharacteristicsRow(characteristic: characteristics[1],
+                               value: characteristicsValues[1] + " kg",
+                               isMultiline: false)
+            CharacteristicsRow(characteristic: characteristics[2],
+                               value: characteristicsValues[2],
+                               isMultiline: true)
+            CharacteristicsRow(characteristic: characteristics[3],
+                               value: characteristicsValues[3],
+                               isMultiline: true)
                 .cornerRadius(radius: 10, corners: [.bottomLeft, .bottomRight])
         }
     }
@@ -87,7 +95,7 @@ struct CardView: View {
     var height: String?
     var weight: String?
     var temperament: String?
-    var origin: String?
+    var bredFor: String?
 
     var body: some View {
         VStack {
@@ -116,7 +124,7 @@ struct CardView: View {
                         DogCharacteristicsTable(characteristicsValues: [height ?? "",
                                                                         weight ?? "",
                                                                         temperament ?? "",
-                                                                        origin ?? ""])
+                                                                        bredFor ?? ""])
                             .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
@@ -124,12 +132,6 @@ struct CardView: View {
             ARButton()
         }
         .navigationTitle(name ?? "")
-    }
-}
-
-struct Button_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView()
     }
 }
 
