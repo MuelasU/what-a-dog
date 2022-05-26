@@ -5,84 +5,54 @@
 //  Created by Larissa Gomes de Stefano Escaliante on 17/05/22.
 //
 
-import AVFoundation
 import SwiftUI
 
-class CameraViewModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
-    @Published var isTaken = false
-    @Published var session = AVCaptureSession()
+class CameraViewModel: ObservableObject {
+    @Published var hasSelectedImage = false
+    @Published var selectedImage: UIImage!
+    @Published var isShowingImagePicker = false
 
-    var alert = false
-    var output = AVCapturePhotoOutput()
+    var cameraService: CaptureDevice!
 
-    func checkForPermission() {
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            setUpCamera()
-            return
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { status in
-                if status {
-                    self.setUpCamera()
-                }
-            }
-        case .denied:
-            alert.toggle()
-            return
-        default:
-            return
+    func injectDependency(device: CaptureDevice) {
+        cameraService = device
+        cameraService.setCaptureAction { image in
+            self.selectedImage = image
+            self.hasSelectedImage = true
         }
     }
 
     func setUpCamera() {
-        do {
-            session.beginConfiguration()
-
-            guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
-                print("Device não foi encontrado")
-                return
-            }
-            let input = try AVCaptureDeviceInput(device: device)
-
-            if session.canAddInput(input) {
-                session.addInput(input)
-            }
-
-            if session.canAddOutput(output) {
-                session.addOutput(output)
-            }
-            session.commitConfiguration()
-        } catch {
-            print("Input da camera não conseguiu ser configurado")
-            print(error.localizedDescription)
-        }
+        cameraService.setUp()
     }
 
     func takePicture() {
-        DispatchQueue.global(qos: .background).async {
-            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-            self.session.stopRunning()
-
-            DispatchQueue.main.async {
-                withAnimation { self.isTaken.toggle() }
-            }
-        }
+        cameraService.takePicture()
     }
 
-    func reTakePicture() {
-        DispatchQueue.global(qos: .background).async {
-            self.session.startRunning()
-            DispatchQueue.main.async {
-                withAnimation { self.isTaken.toggle() }
-            }
-        }
+    func backFromImagePicker(hasSelectedImage: Bool, image: UIImage?) {
+        isShowingImagePicker = false
+        self.hasSelectedImage = hasSelectedImage
+        selectedImage = image
     }
 
-    // TODO: Enviar essa imagem pro modelo de machine learning
-    func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if error != nil {
+    // TODO: Use this to do classification
+    func classify() {
+        let cgImage = selectedImage.cgImage
+        do {
+            let breedDetector = try BreedDetector()
+            guard let classification = try breedDetector.classify(image: cgImage!)
+                .top(5)?
+                .formatted(fractionDigits: 2)
+            else {
+                print("Error on handling classification")
+                return
+            }
+
+            print(classification)
+        } catch {
+            print("Error on classifying image")
             return
         }
-        guard let imageData = photo.fileDataRepresentation() else { return }
     }
 }

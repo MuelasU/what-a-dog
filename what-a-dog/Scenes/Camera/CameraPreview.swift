@@ -6,22 +6,15 @@
 //
 
 import AVFoundation
-import Foundation
 import SwiftUI
 
 struct CameraPreview: UIViewRepresentable {
-    @ObservedObject var camera: CameraViewModel
+    @ObservedObject var viewModel: CameraViewModel
 
     func makeUIView(context _: Context) -> UIView {
-        let view = UIView(frame: UIScreen.main.bounds)
-
-        let preview = AVCaptureVideoPreviewLayer(session: camera.session)
-        preview.frame = view.frame
-        preview.videoGravity = .resizeAspectFill
-
-        view.layer.addSublayer(preview)
-        camera.session.startRunning()
-        return view
+        viewModel.injectDependency(device: CameraService())
+        guard let cameraService = viewModel.cameraService else { return UIView() }
+        return cameraService.getView()
     }
 
     func updateUIView(_: UIView, context _: Context) {}
