@@ -121,10 +121,10 @@ struct CardView: View {
                         .cornerRadius(10)
                         .padding(16)
                         .clipped()
-                        DogCharacteristicsTable(characteristicsValues: [height ?? "",
-                                                                        weight ?? "",
-                                                                        temperament ?? "",
-                                                                        bredFor ?? ""])
+                        DogCharacteristicsTable(characteristicsValues: [height ?? "N/A",
+                                                                        weight ?? "N/A",
+                                                                        temperament ?? "N/A",
+                                                                        bredFor ?? "N/A"])
                             .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
