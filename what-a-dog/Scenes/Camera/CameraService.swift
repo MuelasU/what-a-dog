@@ -72,8 +72,6 @@ class CameraService: NSObject, AVCapturePhotoCaptureDelegate, CaptureDevice {
                 session.addOutput(output)
             }
             session.commitConfiguration()
-
-            UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         } catch {
             print("Input da camera não conseguiu ser configurado")
             print(error.localizedDescription)

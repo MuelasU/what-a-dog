@@ -7,7 +7,6 @@ class AccelerometerService {
 
     // MARK: - Interface
 
-    // TODO: - Starts nil: first photo don't come adequate. Also never stopped
     private(set) var orientation: UIDeviceOrientation?
 
     func start() {
@@ -34,7 +33,6 @@ class AccelerometerService {
         manager = CMMotionManager()
         manager.accelerometerUpdateInterval = updatePeriod
         manager.gyroUpdateInterval = updatePeriod
-        start()
     }
 
     private func updateOrientation(with acceleration: CMAcceleration) {
