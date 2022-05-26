@@ -31,11 +31,11 @@ struct BreedClassification {
     }
 
     /// Create an array of strings formatted as "Breed: Probability in percentage with specified `fractionDigits`"
-    func formatted(fractionDigits: Int = 1) -> [String] {
+    func formatted(fractionDigits: Int = 1) -> [[String: String]] {
         return probabilities.map { pair in
             let breed = pair.0
             let prob = pair.1.toPercentage(fractionDigits: fractionDigits)
-            return "\(breed): \(prob)"
+            return ["\(breed)": "\(prob)"]
         }
     }
 }

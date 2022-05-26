@@ -16,7 +16,7 @@
 		24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A782833BBD900CBA2EC /* TakePictureButton.swift */; };
 		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
 		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
-		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
+		30D181ECA75CCB5165724740 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		31482917283BB1D8001E839D /* DogsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31482916283BB1D8001E839D /* DogsApiService.swift */; };
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
@@ -90,7 +90,6 @@
 		3FBCE7F6282AAD2A004450D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
-		D0309EFE2833CE2A00C5CAE3 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		86328F5D283654C2006B5B1E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionCell.swift; sourceTree = "<group>"; };
@@ -110,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */,
+				30D181ECA75CCB5165724740 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +274,6 @@
 		512BBEB3EADF1E565DF544FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -684,7 +682,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HBHD86UK9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
@@ -692,18 +690,19 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog.CZ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -716,7 +715,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HBHD86UK9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
@@ -724,18 +723,19 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog.CZ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

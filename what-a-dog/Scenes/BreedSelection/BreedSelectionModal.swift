@@ -11,6 +11,8 @@ struct BreedSelectionModal: View {
     @Environment(\.dismiss) var dismiss
     @Binding var showingSheet: Bool
     @State var selectedItem: String?
+    @State var isShowingDetailView = false
+    @State var selectedImage: UIImage
 
     let items: [String] = ["Teckel: 20%", "Basset", "Doberman"]
 
@@ -24,7 +26,7 @@ struct BreedSelectionModal: View {
                         .scaledToFill()
                         .cornerRadius(10.0)
                         .overlay(
-                            Image("dog")
+                            Image(uiImage: selectedImage)
                                 .centerCropped()
                                 .cornerRadius(10.0)
                                 .padding(.all, 24)
@@ -38,36 +40,24 @@ struct BreedSelectionModal: View {
                     }
                 }
                 Spacer()
+                NavigationLink(destination: BreedsListView(), isActive: $isShowingDetailView) { EmptyView() }
                 WADButton(
                     text: "Add to my collection",
                     icon: Image(systemName: "plus")
                 ) {
-                    showingSheet.toggle()
+                    isShowingDetailView = true
                 }
             }
             .background(Color.Wad.gray1)
             .navigationBarTitle(Text("What a dog?"))
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
             .navigationBarBackButtonHidden(false)
         }
     }
 }
 
-struct ModalView: View {
-    @State private var showingSheet = false
-
-    var body: some View {
-        Button("Show Sheet") {
-            showingSheet.toggle()
-        }
-        .sheet(isPresented: $showingSheet) {
-            BreedSelectionModal(showingSheet: $showingSheet)
-        }
-    }
-}
-
-struct ModalPreviews: PreviewProvider {
-    static var previews: some View {
-        BreedSelectionModal(showingSheet: .constant(true))
-    }
-}
+// struct ModalPreviews: PreviewProvider {
+//    static var previews: some View {
+//        BreedSelectionModal(showingSheet: .constant(true))
+//    }
+// }
