@@ -131,7 +131,7 @@ struct CardView: View {
 
             ARButton()
         }
-        .navigationTitle(name ?? "")
+        .navigationTitle(name ?? "Name not available")
     }
 }
 
