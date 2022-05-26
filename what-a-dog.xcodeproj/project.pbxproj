@@ -46,7 +46,6 @@
 		866CED9A283D223600F2EEF7 /* Doguinho.scn in Resources */ = {isa = PBXBuildFile; fileRef = 866CED99283D223600F2EEF7 /* Doguinho.scn */; };
 		866CED9C283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CED9B283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png */; };
 		866CED9E283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */; };
-		86E2568B283D03970095054B /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2568A283D03970095054B /* BlankView.swift */; };
 		86E2568E283D07930095054B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2568D283D07930095054B /* ARView.swift */; };
 		A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */; };
 		A704C3BF283E511E005E36B1 /* ImageExtendion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704C3BE283E511E005E36B1 /* ImageExtendion.swift */; };
@@ -106,7 +105,6 @@
 		866CED99283D223600F2EEF7 /* Doguinho.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Doguinho.scn; sourceTree = "<group>"; };
 		866CED9B283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_BaseColor.png; sourceTree = "<group>"; };
 		866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_Normal.png; sourceTree = "<group>"; };
-		86E2568A283D03970095054B /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		86E2568D283D07930095054B /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionCell.swift; sourceTree = "<group>"; };
 		A704C3BE283E511E005E36B1 /* ImageExtendion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtendion.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 			children = (
 				86328F5D283654C2006B5B1E /* CornerRadius.swift */,
 				8601286328326D26007A857E /* CardsView.swift */,
-				86E2568A283D03970095054B /* BlankView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -543,7 +540,6 @@
 				31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */,
 				31482917283BB1D8001E839D /* DogsApiService.swift in Sources */,
 				31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */,
-				86E2568B283D03970095054B /* BlankView.swift in Sources */,
 				31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */,
 				24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */,
 				31B4801328353CB9003A74E9 /* Dog.swift in Sources */,
