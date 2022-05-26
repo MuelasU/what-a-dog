@@ -1,6 +1,7 @@
 import CoreMotion
 import UIKit
 
+/// Handle data from accelerometer. Use the `shared` instance for accessing its properties
 class AccelerometerService {
     // Singleton
     static let shared: AccelerometerService = .init()

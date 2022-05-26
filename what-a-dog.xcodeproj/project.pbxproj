@@ -184,13 +184,13 @@
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3FB96B4028402F0B0059C5A3 /* Services */,
 				3F85587A28368CC4005BABBE /* ML */,
 				3FA28A86282D277500DC2FD8 /* API */,
 				31B4801228353CB9003A74E9 /* Dog.swift */,
 				31B4801428353CD6003A74E9 /* DogHeight.swift */,
 				31B4801628353CF3003A74E9 /* DogWeight.swift */,
 				31B4801828353D1B003A74E9 /* DogImage.swift */,
-				3F285F8B283FA3FD00206E87 /* AccelerometerService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +231,14 @@
 				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3FB96B4028402F0B0059C5A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F285F8B283FA3FD00206E87 /* AccelerometerService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3FBCE7DC282AAC6F004450D0 = {

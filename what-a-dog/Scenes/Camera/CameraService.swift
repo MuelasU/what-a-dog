@@ -95,6 +95,7 @@ class CameraService: NSObject, AVCapturePhotoCaptureDelegate, CaptureDevice {
         let uiImage = UIImage(
             cgImage: cgImage,
             scale: 1,
+            // Set orientation properly
             orientation: AccelerometerService.shared.orientation?.toRotatedUIImageOrientation ?? .right
         )
         captureAction(uiImage)
