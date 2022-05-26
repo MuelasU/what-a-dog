@@ -98,7 +98,6 @@
 		3FBCE7F6282AAD2A004450D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
-		D0309EFE2833CE2A00C5CAE3 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		862EF026283E5A60006F1178 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		862EF028283E5B82006F1178 /* Bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bark.wav; sourceTree = "<group>"; };
@@ -109,10 +108,10 @@
 		866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_Normal.png; sourceTree = "<group>"; };
 		86E2568A283D03970095054B /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		86E2568D283D07930095054B /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
-		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionCell.swift; sourceTree = "<group>"; };
 		A704C3BE283E511E005E36B1 /* ImageExtendion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtendion.swift; sourceTree = "<group>"; };
 		D0309EFE2833CE2A00C5CAE3 /* BreedSelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionModal.swift; sourceTree = "<group>"; };
+		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -725,7 +724,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7XM8M8X33C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
@@ -757,7 +756,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7XM8M8X33C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
