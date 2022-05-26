@@ -50,7 +50,7 @@ class ARView: UIViewController, ARSCNViewDelegate {
 
     override func motionEnded(_: UIEvent.EventSubtype, with _: UIEvent?) {
         arView.scene.removeAllParticleSystems()
-        dogList.map { $0.removeFromParentNode() }
+        for dog in dogList { dog.removeFromParentNode() }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
