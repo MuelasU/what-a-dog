@@ -52,31 +52,6 @@ struct DogCharacteristics: View {
     }
 }
 
-struct ARButton: View {
-    @State var selection: Int?
-
-    var body: some View {
-        NavigationLink(destination: ZStack { NavigationIndicator() },
-                       tag: 3,
-                       selection: $selection) {
-            HStack(spacing: 10) {
-                Image("logo-apple-ar")
-                    .resizable()
-                    .frame(width: 30, height: 30, alignment: .center)
-                    .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 2))
-
-                Text("See in AR")
-                    .foregroundColor(Color("WADgreen2"))
-                    .padding(EdgeInsets(top: 8, leading: 2, bottom: 8, trailing: 16))
-            }.onTapGesture {
-                selection = 3
-            }
-            .background(Color("WADgray2"))
-            .cornerRadius(10)
-        }
-    }
-}
-
 struct CardView: View {
     var breedName: String = "Salsicha"
     var imageName: String = "largeDog"
@@ -84,6 +59,8 @@ struct CardView: View {
                      DogsStruct(name: "Weight", value: 1),
                      DogsStruct(name: "Aggressiveness", value: 16),
                      DogsStruct(name: "Obedience", value: 2)]
+
+    @State var selection: Int?
 
     var body: some View {
         VStack {
@@ -102,7 +79,9 @@ struct CardView: View {
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
 
-            ARButton()
+            ARButton(selection: $selection) {
+                selection = 3
+            }
         }
         .navigationTitle(breedName)
     }
@@ -112,14 +91,4 @@ struct Button_Previews: PreviewProvider {
     static var previews: some View {
         CardView()
     }
-}
-
-struct NavigationIndicator: UIViewControllerRepresentable {
-    typealias UIViewControllerType = ARView
-
-    func makeUIViewController(context _: Context) -> ARView {
-        return ARView()
-    }
-
-    func updateUIViewController(_: ARView, context _: Context) {}
 }

@@ -39,6 +39,8 @@
 		3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EF282AAC71004450D0 /* Preview Assets.xcassets */; };
 		3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7F6282AAD2A004450D0 /* .gitignore */; };
 		8601286428326D26007A857E /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601286328326D26007A857E /* CardsView.swift */; };
+		8607A82F28450305004D0759 /* ARButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607A82E28450305004D0759 /* ARButton.swift */; };
+		8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607A830284503D1004D0759 /* NavigationIndicator.swift */; };
 		862EF027283E5A60006F1178 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EF026283E5A60006F1178 /* AudioManager.swift */; };
 		862EF029283E5B82006F1178 /* Bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 862EF028283E5B82006F1178 /* Bark.wav */; };
 		86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86328F5D283654C2006B5B1E /* CornerRadius.swift */; };
@@ -98,6 +100,8 @@
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
 		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		8607A82E28450305004D0759 /* ARButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARButton.swift; sourceTree = "<group>"; };
+		8607A830284503D1004D0759 /* NavigationIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationIndicator.swift; sourceTree = "<group>"; };
 		862EF026283E5A60006F1178 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		862EF028283E5B82006F1178 /* Bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bark.wav; sourceTree = "<group>"; };
 		86328F5D283654C2006B5B1E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				3F33F3BA282E83A2002A3BEE /* WADButton.swift */,
 				24E73A782833BBD900CBA2EC /* TakePictureButton.swift */,
 				24A8B11E2835148D0010C57B /* CameraActionButton.swift */,
+				8607A82E28450305004D0759 /* ARButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */,
 				866CED93283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png */,
 				86E2568D283D07930095054B /* ARView.swift */,
+				8607A830284503D1004D0759 /* NavigationIndicator.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 			files = (
 				24247D5F283DD753001622F2 /* CameraService.swift in Sources */,
 				24247D4E283BA72A001622F2 /* ConfirmationView.swift in Sources */,
+				8607A82F28450305004D0759 /* ARButton.swift in Sources */,
 				3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */,
 				3F855874283667BD005BABBE /* BreedClassifier.mlmodel in Sources */,
 				31B4801928353D1B003A74E9 /* DogImage.swift in Sources */,
@@ -522,6 +529,7 @@
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				D0309EFF2833CE2A00C5CAE3 /* BreedSelectionModal.swift in Sources */,
 				A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */,
+				8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,

@@ -1,8 +1,8 @@
 //
 //  AudioManager.swift
-//  tumbalacatum
+//  ArUi
 //
-//  Created by Paulo Bassani on 09/02/22.
+//  Created by Fernando Santos on 20/05/22.
 //
 
 import AVFoundation
