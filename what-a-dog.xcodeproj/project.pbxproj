@@ -43,6 +43,7 @@
 		24E73A782833BBD900CBA2EC /* TakePictureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButton.swift; sourceTree = "<group>"; };
 		24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		310A81E2283FC0140052270B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		31482916283BB1D8001E839D /* DogsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsApiService.swift; sourceTree = "<group>"; };
 		31B4801228353CB9003A74E9 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		31B4801428353CD6003A74E9 /* DogHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogHeight.swift; sourceTree = "<group>"; };
@@ -102,6 +103,17 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		31954CF52844EAE400FE613C /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+				31B4801228353CB9003A74E9 /* Dog.swift */,
+				31B4801428353CD6003A74E9 /* DogHeight.swift */,
+				31B4801628353CF3003A74E9 /* DogWeight.swift */,
+				31B4801828353D1B003A74E9 /* DogImage.swift */,
+			);
+			path = Dog;
+			sourceTree = "<group>";
+		};
 		31B4801A28353D62003A74E9 /* BreedsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,12 +146,9 @@
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31954CF52844EAE400FE613C /* Dog */,
 				3F85587A28368CC4005BABBE /* ML */,
 				3FA28A86282D277500DC2FD8 /* API */,
-				31B4801228353CB9003A74E9 /* Dog.swift */,
-				31B4801428353CD6003A74E9 /* DogHeight.swift */,
-				31B4801628353CF3003A74E9 /* DogWeight.swift */,
-				31B4801828353D1B003A74E9 /* DogImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 		3FBCE7E7282AAC6F004450D0 /* what-a-dog */ = {
 			isa = PBXGroup;
 			children = (
+				310A81E2283FC0140052270B /* Info.plist */,
 				3F85587528366B7C005BABBE /* Helpers */,
 				3FA28A89282D296C00DC2FD8 /* Components */,
 				3FA28A88282D282D00DC2FD8 /* Scenes */,
@@ -534,9 +544,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = P952S3W7DW;
+				DEVELOPMENT_TEAM = DV562Y5Y34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "what-a-dog/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -565,9 +576,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = P952S3W7DW;
+				DEVELOPMENT_TEAM = DV562Y5Y34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "what-a-dog/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take cute pictures of dogs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
