@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BreedsListViewCard: View {
-    @State var nome: String?
+    @State var name: String?
     @State var imageURL: URL?
 
     var body: some View {
@@ -18,7 +18,7 @@ struct BreedsListViewCard: View {
             .overlay(
                 VStack {
                     HStack {
-                        Text(nome ?? "Test")
+                        Text(name ?? "Test")
                             .foregroundColor(.white)
                             .bold()
                             .padding([.leading, .trailing, .top], 8)
