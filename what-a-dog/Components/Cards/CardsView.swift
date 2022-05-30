@@ -134,15 +134,3 @@ struct CardView: View {
         .navigationTitle(name ?? "Name not available")
     }
 }
-
-extension Image {
-    func centerCropped() -> some View {
-        GeometryReader { geo in
-            self
-                .resizable()
-                .scaledToFill()
-                .frame(width: geo.size.width, height: geo.size.height)
-                .clipped()
-        }
-    }
-}
