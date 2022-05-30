@@ -16,5 +16,6 @@ struct Dog: Decodable, Identifiable {
     var breedGroup: String?
     var lifeSpan: String?
     var temperament: String?
+    var origin: String?
     var image: DogImage?
 }
