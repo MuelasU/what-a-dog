@@ -30,8 +30,8 @@ struct CharacteristicsRow: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .background(Color("WADbeige1"))
-            .foregroundColor(Color("WADgreen2"))
+            .background(Color.Wad.beige1)
+            .foregroundColor(Color.Wad.green2)
         } else {
             HStack {
                 Text(characteristic ?? "")
@@ -42,8 +42,8 @@ struct CharacteristicsRow: View {
                     .padding()
                     .font(.system(size: 18, weight: .medium))
             }
-            .background(Color("WADbeige1"))
-            .foregroundColor(Color("WADgreen2"))
+            .background(Color.Wad.beige1)
+            .foregroundColor(Color.Wad.green2)
         }
     }
 }
@@ -81,10 +81,10 @@ struct ARButton: View {
                 .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 2))
 
             Text("See in AR")
-                .foregroundColor(Color("WADgreen2"))
+                .foregroundColor(Color.Wad.green2)
                 .padding(EdgeInsets(top: 8, leading: 2, bottom: 8, trailing: 16))
         }
-        .background(Color("WADgray2"))
+        .background(Color.Wad.gray2)
         .cornerRadius(10)
     }
 }
