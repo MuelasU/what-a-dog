@@ -31,6 +31,7 @@ class CameraService: NSObject, AVCapturePhotoCaptureDelegate, CaptureDevice {
         preview.videoGravity = .resizeAspectFill
         view.layer.addSublayer(preview)
         session.startRunning()
+        // FIXME: - Never being stopped
         return view
     }
 
@@ -78,9 +79,7 @@ class CameraService: NSObject, AVCapturePhotoCaptureDelegate, CaptureDevice {
     }
 
     func takePicture() {
-        DispatchQueue.global(qos: .background).async {
-            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        }
+        output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
     }
 
     func photoOutput(_: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -89,8 +88,16 @@ class CameraService: NSObject, AVCapturePhotoCaptureDelegate, CaptureDevice {
             return
         }
 
-        guard let imageData = photo.fileDataRepresentation() else { return }
-        guard let image = UIImage(data: imageData) else { return }
-        captureAction(image)
+        guard let cgImage = photo.cgImageRepresentation() else {
+            return
+        }
+
+        let uiImage = UIImage(
+            cgImage: cgImage,
+            scale: 1,
+            // Set orientation properly
+            orientation: AccelerometerService.shared.orientation?.toRotatedUIImageOrientation ?? .right
+        )
+        captureAction(uiImage)
     }
 }

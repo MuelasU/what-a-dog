@@ -16,7 +16,7 @@
 		24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A782833BBD900CBA2EC /* TakePictureButton.swift */; };
 		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
 		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
-		30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */; };
+		30D181ECA75CCB5165724740 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		31482917283BB1D8001E839D /* DogsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31482916283BB1D8001E839D /* DogsApiService.swift */; };
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
@@ -25,6 +25,7 @@
 		31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */; };
 		31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */; };
 		31B4802028353DBB003A74E9 /* BreedsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801F28353DBB003A74E9 /* BreedsListView.swift */; };
+		3F285F8C283FA3FD00206E87 /* AccelerometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F285F8B283FA3FD00206E87 /* AccelerometerService.swift */; };
 		3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BA282E83A2002A3BEE /* WADButton.swift */; };
 		3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BC282E83F8002A3BEE /* Colors.swift */; };
 		3F33F3BF282E841D002A3BEE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F33F3BE282E841D002A3BEE /* Request.swift */; };
@@ -33,6 +34,7 @@
 		3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */; };
 		3F85587928368781005BABBE /* Double+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587828368781005BABBE /* Double+Percentage.swift */; };
 		3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85587B28368CE8005BABBE /* BreedClassification.swift */; };
+		3F90426E283E78DF00A1B9C6 /* UIDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90426D283E78DF00A1B9C6 /* UIDeviceOrientation.swift */; };
 		3FBCE7E9282AAC6F004450D0 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7E8282AAC6F004450D0 /* MainApp.swift */; };
 		3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EA282AAC6F004450D0 /* ContentView.swift */; };
 		3FBCE7ED282AAC71004450D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EC282AAC71004450D0 /* Assets.xcassets */; };
@@ -84,6 +86,7 @@
 		31B4801B28353D79003A74E9 /* BreedsListViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewCard.swift; sourceTree = "<group>"; };
 		31B4801D28353D9C003A74E9 /* BreedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewModel.swift; sourceTree = "<group>"; };
 		31B4801F28353DBB003A74E9 /* BreedsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListView.swift; sourceTree = "<group>"; };
+		3F285F8B283FA3FD00206E87 /* AccelerometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerService.swift; sourceTree = "<group>"; };
 		3F33F3BA282E83A2002A3BEE /* WADButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADButton.swift; sourceTree = "<group>"; };
 		3F33F3BC282E83F8002A3BEE /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3F33F3BE282E841D002A3BEE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		3F85587828368781005BABBE /* Double+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Percentage.swift"; sourceTree = "<group>"; };
 		3F85587B28368CE8005BABBE /* BreedClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedClassification.swift; sourceTree = "<group>"; };
+		3F90426D283E78DF00A1B9C6 /* UIDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceOrientation.swift; sourceTree = "<group>"; };
 		3FBCE7E5282AAC6F004450D0 /* what-a-dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what-a-dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBCE7E8282AAC6F004450D0 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		3FBCE7EA282AAC6F004450D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D181ECA75CCB5165724740 /* Pods_what_a_dog.framework in Frameworks */,
+				30D181ECA75CCB5165724740 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +198,7 @@
 			children = (
 				3F85587628366B9A005BABBE /* CGImage+CVPixelBuffer.swift */,
 				3F85587828368781005BABBE /* Double+Percentage.swift */,
+				3F90426D283E78DF00A1B9C6 /* UIDeviceOrientation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 		3FA28A85282D276A00DC2FD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3FB96B4028402F0B0059C5A3 /* Services */,
 				31954CF52844EAE400FE613C /* Dog */,
 				3F85587A28368CC4005BABBE /* ML */,
 				3FA28A86282D277500DC2FD8 /* API */,
@@ -255,6 +261,14 @@
 				24A8B11D283514600010C57B /* Buttons */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3FB96B4028402F0B0059C5A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F285F8B283FA3FD00206E87 /* AccelerometerService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3FBCE7DC282AAC6F004450D0 = {
@@ -305,7 +319,6 @@
 		512BBEB3EADF1E565DF544FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -537,12 +550,14 @@
 				8601286428326D26007A857E /* CardsView.swift in Sources */,
 				86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */,
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
+				3F90426E283E78DF00A1B9C6 /* UIDeviceOrientation.swift in Sources */,
 				D0309EFF2833CE2A00C5CAE3 /* BreedSelectionModal.swift in Sources */,
 				A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */,
 				8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
+				3F285F8C283FA3FD00206E87 /* AccelerometerService.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */,
 				3F85587928368781005BABBE /* Double+Percentage.swift in Sources */,
 				24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */,

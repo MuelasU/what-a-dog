@@ -16,6 +16,12 @@ struct CameraView: View {
             ZStack {
                 CameraPreview(viewModel: viewModel)
                     .ignoresSafeArea(.all, edges: .all)
+                    .onAppear {
+                        AccelerometerService.shared.start()
+                    }
+                    .onDisappear {
+                        AccelerometerService.shared.stop()
+                    }
                 VStack {
                     Spacer()
                     ActionCameraButtons(viewModel: viewModel, selection: $selection)
