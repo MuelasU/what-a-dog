@@ -20,6 +20,7 @@ class CameraViewModel: ObservableObject {
         cameraService.setCaptureAction { image in
             self.selectedImage = image
             self.hasSelectedImage = true
+            self.classify()
         }
     }
 
