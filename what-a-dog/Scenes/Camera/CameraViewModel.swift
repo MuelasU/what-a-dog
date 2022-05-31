@@ -42,15 +42,18 @@ class CameraViewModel: ObservableObject {
         let cgImage = selectedImage.cgImage
         do {
             let breedDetector = try BreedDetector()
-            guard let classification = try breedDetector.classify(image: cgImage!)
-                .top(5)?
-                .formatted(fractionDigits: 2)
-            else {
+
+            guard let classification = try breedDetector.classify(image: cgImage!) else {
+                print("No dog in image")
+                return
+            }
+
+            guard let formatted = classification.top(5)?.formatted() else {
                 print("Error on handling classification")
                 return
             }
 
-            print(classification)
+            print(formatted)
         } catch {
             print("Error on classifying image")
             return
