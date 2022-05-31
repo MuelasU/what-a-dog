@@ -72,23 +72,6 @@ struct DogCharacteristicsTable: View {
     }
 }
 
-struct ARButton: View {
-    var body: some View {
-        HStack(spacing: 10) {
-            Image("logo-apple-ar")
-                .resizable()
-                .frame(width: 30, height: 30, alignment: .center)
-                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 2))
-
-            Text("See in AR")
-                .foregroundColor(Color.Wad.green2)
-                .padding(EdgeInsets(top: 8, leading: 2, bottom: 8, trailing: 16))
-        }
-        .background(Color.Wad.gray2)
-        .cornerRadius(10)
-    }
-}
-
 struct CardView: View {
     var name: String?
     var imageURL: URL?
@@ -96,6 +79,8 @@ struct CardView: View {
     var weight: String?
     var temperament: String?
     var bredFor: String?
+
+    @State var selection: Int?
 
     var body: some View {
         VStack {
@@ -129,7 +114,9 @@ struct CardView: View {
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
 
-            ARButton()
+            ARButton(selection: $selection) {
+                selection = 3
+            }
         }
         .navigationTitle(name ?? "Name not available")
     }

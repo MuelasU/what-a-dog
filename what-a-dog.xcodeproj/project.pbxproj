@@ -39,7 +39,16 @@
 		3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7EF282AAC71004450D0 /* Preview Assets.xcassets */; };
 		3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCE7F6282AAD2A004450D0 /* .gitignore */; };
 		8601286428326D26007A857E /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8601286328326D26007A857E /* CardsView.swift */; };
+		8607A82F28450305004D0759 /* ARButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607A82E28450305004D0759 /* ARButton.swift */; };
+		8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607A830284503D1004D0759 /* NavigationIndicator.swift */; };
+		862EF027283E5A60006F1178 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EF026283E5A60006F1178 /* AudioManager.swift */; };
+		862EF029283E5B82006F1178 /* Bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 862EF028283E5B82006F1178 /* Bark.wav */; };
 		86328F5E283654C2006B5B1E /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86328F5D283654C2006B5B1E /* CornerRadius.swift */; };
+		866CED98283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CED93283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png */; };
+		866CED9A283D223600F2EEF7 /* Doguinho.scn in Resources */ = {isa = PBXBuildFile; fileRef = 866CED99283D223600F2EEF7 /* Doguinho.scn */; };
+		866CED9C283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CED9B283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png */; };
+		866CED9E283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */; };
+		86E2568E283D07930095054B /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E2568D283D07930095054B /* ARView.swift */; };
 		A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */; };
 		A704C3BF283E511E005E36B1 /* ImageExtendion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704C3BE283E511E005E36B1 /* ImageExtendion.swift */; };
 		D0309EFF2833CE2A00C5CAE3 /* BreedSelectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0309EFE2833CE2A00C5CAE3 /* BreedSelectionModal.swift */; };
@@ -91,12 +100,21 @@
 		3FBCE7F6282AAD2A004450D0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6E3EDFF6E245E950574BC6FE /* Pods-what-a-dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.release.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.release.xcconfig"; sourceTree = "<group>"; };
 		789A8769CCC26E5F5107BB23 /* Pods-what-a-dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-what-a-dog.debug.xcconfig"; path = "Target Support Files/Pods-what-a-dog/Pods-what-a-dog.debug.xcconfig"; sourceTree = "<group>"; };
-		D0309EFE2833CE2A00C5CAE3 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		8601286328326D26007A857E /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		8607A82E28450305004D0759 /* ARButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARButton.swift; sourceTree = "<group>"; };
+		8607A830284503D1004D0759 /* NavigationIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationIndicator.swift; sourceTree = "<group>"; };
+		862EF026283E5A60006F1178 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		862EF028283E5B82006F1178 /* Bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bark.wav; sourceTree = "<group>"; };
 		86328F5D283654C2006B5B1E /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		866CED93283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_Roughness.png; sourceTree = "<group>"; };
+		866CED99283D223600F2EEF7 /* Doguinho.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Doguinho.scn; sourceTree = "<group>"; };
+		866CED9B283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_BaseColor.png; sourceTree = "<group>"; };
+		866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Doguinho_low_poly_doguinho_uv_Normal.png; sourceTree = "<group>"; };
+		86E2568D283D07930095054B /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		A704C3BC283BD045005E36B1 /* BreedSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionCell.swift; sourceTree = "<group>"; };
 		A704C3BE283E511E005E36B1 /* ImageExtendion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtendion.swift; sourceTree = "<group>"; };
 		D0309EFE2833CE2A00C5CAE3 /* BreedSelectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedSelectionModal.swift; sourceTree = "<group>"; };
+		FEC65B1FB76DCF1072F4DA0A /* Pods_what_a_dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_what_a_dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +163,7 @@
 				3F33F3BA282E83A2002A3BEE /* WADButton.swift */,
 				24E73A782833BBD900CBA2EC /* TakePictureButton.swift */,
 				24A8B11E2835148D0010C57B /* CameraActionButton.swift */,
+				8607A82E28450305004D0759 /* ARButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -220,6 +239,7 @@
 		3FA28A88282D282D00DC2FD8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				86E2568C283D076E0095054B /* AR */,
 				A704C3BB283BCDCD005E36B1 /* BreedSelection */,
 				31B4801A28353D62003A74E9 /* BreedsList */,
 				24A8B11C28350F5A0010C57B /* Camera */,
@@ -297,6 +317,21 @@
 				8601286328326D26007A857E /* CardsView.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		86E2568C283D076E0095054B /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				862EF028283E5B82006F1178 /* Bark.wav */,
+				862EF026283E5A60006F1178 /* AudioManager.swift */,
+				866CED99283D223600F2EEF7 /* Doguinho.scn */,
+				866CED9B283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png */,
+				866CED9D283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png */,
+				866CED93283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png */,
+				86E2568D283D07930095054B /* ARView.swift */,
+				8607A830284503D1004D0759 /* NavigationIndicator.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 		8F31E54CEAD9591B0F22E5CA /* Pods */ = {
@@ -409,7 +444,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FBCE7F0282AAC71004450D0 /* Preview Assets.xcassets in Resources */,
+				862EF029283E5B82006F1178 /* Bark.wav in Resources */,
 				3FBCE7F7282AAD2A004450D0 /* .gitignore in Resources */,
+				866CED98283D220500F2EEF7 /* Doguinho_low_poly_doguinho_uv_Roughness.png in Resources */,
+				866CED9A283D223600F2EEF7 /* Doguinho.scn in Resources */,
+				866CED9E283D237800F2EEF7 /* Doguinho_low_poly_doguinho_uv_Normal.png in Resources */,
+				866CED9C283D236900F2EEF7 /* Doguinho_low_poly_doguinho_uv_BaseColor.png in Resources */,
 				3FBCE7ED282AAC71004450D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +530,7 @@
 			files = (
 				24247D5F283DD753001622F2 /* CameraService.swift in Sources */,
 				24247D4E283BA72A001622F2 /* ConfirmationView.swift in Sources */,
+				8607A82F28450305004D0759 /* ARButton.swift in Sources */,
 				3F85587C28368CE8005BABBE /* BreedClassification.swift in Sources */,
 				3F855874283667BD005BABBE /* BreedClassifier.mlmodel in Sources */,
 				31B4801928353D1B003A74E9 /* DogImage.swift in Sources */,
@@ -498,6 +539,7 @@
 				3FBCE7EB282AAC6F004450D0 /* ContentView.swift in Sources */,
 				D0309EFF2833CE2A00C5CAE3 /* BreedSelectionModal.swift in Sources */,
 				A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */,
+				8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
@@ -511,6 +553,7 @@
 				24A8B123283522AF0010C57B /* ImagePickerPreview.swift in Sources */,
 				3F73CFC228357F7B009F8AEF /* BreedDetector.swift in Sources */,
 				31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */,
+				86E2568E283D07930095054B /* ARView.swift in Sources */,
 				31B4801E28353D9C003A74E9 /* BreedListViewModel.swift in Sources */,
 				31B4801C28353D79003A74E9 /* BreedsListViewCard.swift in Sources */,
 				31482917283BB1D8001E839D /* DogsApiService.swift in Sources */,
@@ -518,6 +561,7 @@
 				31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */,
 				24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */,
 				31B4801328353CB9003A74E9 /* Dog.swift in Sources */,
+				862EF027283E5A60006F1178 /* AudioManager.swift in Sources */,
 				24A8B11F2835148D0010C57B /* CameraActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,7 +754,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fer.what-a-dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -743,7 +787,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Muelas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fer.what-a-dog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
