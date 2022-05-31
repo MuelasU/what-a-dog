@@ -11,6 +11,7 @@ import SwiftUI
 struct BreedsListView: View {
     @StateObject var viewModel = BreedListViewModel()
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
         ScrollView {
@@ -31,5 +32,7 @@ struct BreedsListView: View {
         }
         .navigationTitle("Collection")
         .navigationBarTitleDisplayMode(.large)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: NavBackButton(message: "Camera", presentationMode: presentationMode))
     }
 }
