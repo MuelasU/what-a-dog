@@ -16,6 +16,12 @@ struct CameraView: View {
             ZStack {
                 CameraPreview(viewModel: viewModel)
                     .ignoresSafeArea(.all, edges: .all)
+                    .onAppear {
+                        AccelerometerService.shared.start()
+                    }
+                    .onDisappear {
+                        AccelerometerService.shared.stop()
+                    }
                 VStack {
                     Spacer()
                     ActionCameraButtons(viewModel: viewModel, selection: $selection)
@@ -54,7 +60,7 @@ struct ActionCameraButtons: View {
             )
             Spacer()
             Spacer()
-            NavigationLink(destination: BreedsListView(selection: nil), tag: 1, selection: $selection) {
+            NavigationLink(destination: BreedsListView(), tag: 1, selection: $selection) {
                 CameraActionButton(
                     symbol: "square.grid.2x2.fill",
                     action: { selection = 1 },

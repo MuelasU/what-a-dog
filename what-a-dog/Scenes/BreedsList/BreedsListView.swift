@@ -11,7 +11,6 @@ import SwiftUI
 struct BreedsListView: View {
     @StateObject var viewModel = BreedListViewModel()
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
-    @State var selection: Int?
 
     @FetchRequest(sortDescriptors: []) var knownBreeds: FetchedResults<BreedEntity>
     @Environment(\.managedObjectContext) var moc
@@ -20,24 +19,20 @@ struct BreedsListView: View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {
                 ForEach(viewModel.dogs) { dog in
-
-                    NavigationLink(destination: CardView(breedName: dog.name), tag: 2, selection: $selection) {
-                        BreedsListViewCard(nome: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)
-                            .onTapGesture {
-                                selection = 2
-                            }
+                    NavigationLink(destination: CardView(name: dog.name,
+                                                         imageURL: URL(string: dog.image?.url ?? "")!,
+                                                         height: dog.height?.metric,
+                                                         weight: dog.weight?.metric,
+                                                         temperament: dog.temperament,
+                                                         bredFor: dog.bredFor)) {
+                        BreedsListViewCard(name: dog.name, imageURL: URL(string: dog.image?.url ?? "")!)
                     }
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
             .padding([.leading, .trailing])
         }
         .navigationTitle("Collection")
         .navigationBarTitleDisplayMode(.large)
-    }
-}
-
-struct BreedsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        BreedsListView()
     }
 }
