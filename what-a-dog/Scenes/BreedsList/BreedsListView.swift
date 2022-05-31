@@ -13,7 +13,6 @@ struct BreedsListView: View {
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
 
     @FetchRequest(sortDescriptors: []) var knownBreeds: FetchedResults<BreedEntity>
-    @Environment(\.managedObjectContext) var moc
 
     var body: some View {
         ScrollView {
