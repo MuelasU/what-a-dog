@@ -44,7 +44,7 @@ class CameraViewModel: ObservableObject {
         do {
             let breedDetector = try BreedDetector()
             guard let classification = try breedDetector.classify(image: cgImage!)
-                .top(5)?
+                .top(3)?
                 .formatted(fractionDigits: 2)
             else {
                 print("Error on handling classification")

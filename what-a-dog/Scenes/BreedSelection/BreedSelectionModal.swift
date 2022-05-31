@@ -15,8 +15,6 @@ struct BreedSelectionModal: View {
     @State var selectedImage: UIImage
     @State var classificationList: [(String, String)]!
 
-    let items: [String] = ["Teckel: 20%", "Basset", "Doberman"]
-
     var body: some View {
         NavigationView {
             VStack {
@@ -36,7 +34,7 @@ struct BreedSelectionModal: View {
                 }
                 .padding(.all, 16)
                 List {
-                    ForEach(items.indices, id: \.self) { indice in
+                    ForEach(classificationList.indices, id: \.self) { indice in
                         BreedSelectionCell(selectedDog: $selectedItem, cellName: classificationList[indice].0, breedPercentage: classificationList[indice].1)
                     }
                 }
