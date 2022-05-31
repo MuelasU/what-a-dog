@@ -81,7 +81,8 @@ struct CardView: View {
     var bredFor: String?
 
     @State var selection: Int?
-
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         VStack {
             Image("card_large")
@@ -119,5 +120,7 @@ struct CardView: View {
             }
         }
         .navigationTitle(name ?? "Name not available")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: NavBackButton(presentationMode: $presentationMode))
     }
 }
