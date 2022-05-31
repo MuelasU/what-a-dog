@@ -13,6 +13,9 @@ struct BreedsListView: View {
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     @State var selection: Int?
 
+    @FetchRequest(sortDescriptors: []) var knownBreeds: FetchedResults<BreedEntity>
+    @Environment(\.managedObjectContext) var moc
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {
