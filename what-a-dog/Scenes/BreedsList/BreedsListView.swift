@@ -12,6 +12,9 @@ struct BreedsListView: View {
     @StateObject var viewModel = BreedListViewModel()
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
 
+    // TODO: use this list to show only known breeds
+    @FetchRequest(sortDescriptors: []) var knownBreeds: FetchedResults<BreedEntity>
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 8) {

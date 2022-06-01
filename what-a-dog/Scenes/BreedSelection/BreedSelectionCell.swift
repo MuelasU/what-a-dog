@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BreedSelectionCell: View {
-    @Binding var selectedDog: String?
+    @Binding var selectedDog: String
     let cellName: String
     var breedPercentage: String
 

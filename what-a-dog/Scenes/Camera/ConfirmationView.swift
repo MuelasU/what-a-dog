@@ -63,10 +63,12 @@ struct ConfirmationButtons: View {
                 content: {
                     BreedSelectionModal(
                         showingSheet: $showingSheet,
+                        selectedItem: $viewModel.classification[0].0
                         selectedImage: viewModel.selectedImage,
                         classificationList: viewModel.classification
                     )
                 }
+            )
             )
             Spacer()
         }

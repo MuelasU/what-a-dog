@@ -12,6 +12,7 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, DataController.shared.container.viewContext)
         }
     }
 }
