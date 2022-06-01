@@ -42,7 +42,7 @@ class BreedDetector {
         return hasDog
     }
 
-    /// Apply the classification algorithm for the requested `image`. Returns the result as a ``BreedClassification`` structure
+    /// Apply the classification algorithm for the requested `image`. Returns the result as a ``BreedClassification`` structure or `nil` if there is no dog in image
     func classify(image: CGImage) throws -> BreedClassification? {
         guard checkForDog(in: image) else {
             return nil
