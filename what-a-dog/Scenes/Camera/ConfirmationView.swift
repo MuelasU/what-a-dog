@@ -51,14 +51,23 @@ struct ConfirmationButtons: View {
                 action: {
                     showingSheet.toggle()
                     viewModel.classify()
-//                    (viewModel.selectedImage == nil) ? print("nau tem imagem") : print("tem img")
                 },
                 fontSize: 60
             )
-            .sheet(isPresented: $showingSheet) {
-                BreedSelectionModal(showingSheet: $showingSheet, selectedImage: viewModel.selectedImage,
-                                    classificationList: viewModel.classification)
-            }
+            .sheet(
+                isPresented: $showingSheet,
+                onDismiss: {
+                    viewModel.classification = nil
+                    viewModel.hasSelectedImage = false
+                },
+                content: {
+                    BreedSelectionModal(
+                        showingSheet: $showingSheet,
+                        selectedImage: viewModel.selectedImage,
+                        classificationList: viewModel.classification
+                    )
+                }
+            )
             Spacer()
         }
     }

@@ -20,7 +20,6 @@ class CameraViewModel: ObservableObject {
         cameraService.setCaptureAction { image in
             self.selectedImage = image
             self.hasSelectedImage = true
-            self.classify()
         }
     }
 
@@ -38,7 +37,6 @@ class CameraViewModel: ObservableObject {
         selectedImage = image
     }
 
-    // TODO: Use this to do classification
     func classify() {
         let cgImage = selectedImage.cgImage
         do {
@@ -55,7 +53,7 @@ class CameraViewModel: ObservableObject {
             }
 
             print(formatted)
-            self.classification = classification
+            self.classification = formatted
         } catch {
             print("Error on classifying image")
             return
