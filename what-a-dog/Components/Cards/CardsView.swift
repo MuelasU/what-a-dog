@@ -115,11 +115,12 @@ struct CardView: View {
                     })
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
 
-            ARButton(selection: $selection) {
+            ARButton(name: name, selection: $selection) {
                 selection = 3
             }
         }
         .navigationTitle(name ?? "Name not available")
+        .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: NavBackButton(message: "Collection", presentationMode: presentationMode))
     }
