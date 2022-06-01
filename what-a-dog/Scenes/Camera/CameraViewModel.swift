@@ -11,6 +11,7 @@ class CameraViewModel: ObservableObject {
     @Published var hasSelectedImage = false
     @Published var selectedImage: UIImage!
     @Published var isShowingImagePicker = false
+    @Published var classification: [(String, String)]?
 
     var cameraService: CaptureDevice!
 
@@ -48,12 +49,13 @@ class CameraViewModel: ObservableObject {
                 return
             }
 
-            guard let formatted = classification.top(5)?.formatted() else {
+            guard let formatted = classification.top(3)?.formatted() else {
                 print("Error on handling classification")
                 return
             }
 
             print(formatted)
+            self.classification = classification
         } catch {
             print("Error on classifying image")
             return
