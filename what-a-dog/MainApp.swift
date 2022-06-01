@@ -11,7 +11,7 @@ import SwiftUI
 struct MainApp: App {
     var body: some Scene {
         WindowGroup {
-            CoreDataTestView()
+            ContentView()
                 .environment(\.managedObjectContext, DataController.shared.container.viewContext)
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 class DataController: ObservableObject {
     static let shared = DataController()
@@ -19,10 +20,11 @@ class DataController: ObservableObject {
         }
     }
 
-    func saveBreed(name: String) {
+    func saveBreed(name: String, image: UIImage) {
         let breed = BreedEntity(context: container.viewContext)
         breed.id = UUID()
         breed.name = name
+        breed.image = image.pngData()
         try? container.viewContext.save()
     }
 }

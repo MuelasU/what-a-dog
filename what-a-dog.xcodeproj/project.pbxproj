@@ -14,7 +14,6 @@
 		24A8B123283522AF0010C57B /* ImagePickerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A8B122283522AF0010C57B /* ImagePickerPreview.swift */; };
 		24A9B4E22844FBCC00BC31A3 /* BreedModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24A9B4E02844FBCC00BC31A3 /* BreedModel.xcdatamodeld */; };
 		24A9B4E72846480900BC31A3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9B4E62846480900BC31A3 /* DataController.swift */; };
-		24A9B4E92846496300BC31A3 /* CoreDataTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A9B4E82846496300BC31A3 /* CoreDataTestView.swift */; };
 		24E73A772833B86300CBA2EC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A762833B86300CBA2EC /* CameraView.swift */; };
 		24E73A792833BBD900CBA2EC /* TakePictureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A782833BBD900CBA2EC /* TakePictureButton.swift */; };
 		24E73A7B2833C28D00CBA2EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */; };
@@ -78,7 +77,6 @@
 		24A8B122283522AF0010C57B /* ImagePickerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPreview.swift; sourceTree = "<group>"; };
 		24A9B4E12844FBCC00BC31A3 /* BreedModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BreedModel.xcdatamodel; sourceTree = "<group>"; };
 		24A9B4E62846480900BC31A3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		24A9B4E82846496300BC31A3 /* CoreDataTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestView.swift; sourceTree = "<group>"; };
 		24E73A762833B86300CBA2EC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		24E73A782833BBD900CBA2EC /* TakePictureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureButton.swift; sourceTree = "<group>"; };
 		24E73A7A2833C28D00CBA2EC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 				3FBCE7E8282AAC6F004450D0 /* MainApp.swift */,
 				3FBCE7EC282AAC71004450D0 /* Assets.xcassets */,
 				3FBCE7EE282AAC71004450D0 /* Preview Content */,
-				24A9B4E82846496300BC31A3 /* CoreDataTestView.swift */,
 			);
 			path = "what-a-dog";
 			sourceTree = "<group>";
@@ -570,7 +567,6 @@
 				3F90426E283E78DF00A1B9C6 /* UIDeviceOrientation.swift in Sources */,
 				D0309EFF2833CE2A00C5CAE3 /* BreedSelectionModal.swift in Sources */,
 				A704C3BD283BD045005E36B1 /* BreedSelectionCell.swift in Sources */,
-				24A9B4E92846496300BC31A3 /* CoreDataTestView.swift in Sources */,
 				8607A831284503D1004D0759 /* NavigationIndicator.swift in Sources */,
 				3F33F3BD282E83F8002A3BEE /* Colors.swift in Sources */,
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
@@ -772,7 +768,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = HBHD86UK9H;
+				DEVELOPMENT_TEAM = A896M3FV6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "what-a-dog/Info.plist";
@@ -788,7 +784,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lianas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "lianas.what-a-dog.lari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -805,7 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"what-a-dog/Preview Content\"";
-				DEVELOPMENT_TEAM = HBHD86UK9H;
+				DEVELOPMENT_TEAM = A896M3FV6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "what-a-dog/Info.plist";
@@ -821,7 +817,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lianas.what-a-dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "lianas.what-a-dog.lari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
