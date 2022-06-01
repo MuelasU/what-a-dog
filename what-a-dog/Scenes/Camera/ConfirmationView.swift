@@ -29,6 +29,7 @@ struct ConfirmationView: View {
 struct ConfirmationButtons: View {
     @ObservedObject var viewModel: CameraViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State private var showingSheet = false
 
     var body: some View {
         HStack {
@@ -47,9 +48,17 @@ struct ConfirmationButtons: View {
             Spacer()
             CameraActionButton(
                 symbol: "checkmark.circle.fill",
-                action: {},
+                action: {
+                    showingSheet.toggle()
+                    viewModel.classify()
+//                    (viewModel.selectedImage == nil) ? print("nau tem imagem") : print("tem img")
+                },
                 fontSize: 60
             )
+            .sheet(isPresented: $showingSheet) {
+                BreedSelectionModal(showingSheet: $showingSheet, selectedImage: viewModel.selectedImage,
+                                    classificationList: viewModel.classification)
+            }
             Spacer()
         }
     }
