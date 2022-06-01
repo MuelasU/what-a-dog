@@ -10,6 +10,7 @@ import Foundation
 
 class BreedListViewModel: ObservableObject {
     @Published var dogs = [Dog]()
+
     private var apiService: DogApiService!
 
     init() {
@@ -18,8 +19,15 @@ class BreedListViewModel: ObservableObject {
     }
 
     func getDogsData() {
-        apiService.retrieveDogsData(completion: { dogs in
+        apiService.retrieveDogsData(completion: { [self] dogs in
             self.dogs = dogs
+            self.filterDogs(toBeFiltered: &self.dogs, theFilter: BreedsListEnum.allCases.map { $0.rawValue })
         })
+    }
+
+    func filterDogs(toBeFiltered: inout [Dog], theFilter: [String]) {
+        toBeFiltered = toBeFiltered.filter { dog -> Bool in
+            theFilter.contains(dog.name)
+        }
     }
 }
