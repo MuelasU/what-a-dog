@@ -18,6 +18,7 @@
 		24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */; };
 		30D181ECA75CCB5165724740 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		31482917283BB1D8001E839D /* DogsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31482916283BB1D8001E839D /* DogsApiService.swift */; };
+		3153C3E42847987F008CDDBD /* BreedsListEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153C3E32847987F008CDDBD /* BreedsListEnum.swift */; };
 		31B4801328353CB9003A74E9 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801228353CB9003A74E9 /* Dog.swift */; };
 		31B4801528353CD6003A74E9 /* DogHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801428353CD6003A74E9 /* DogHeight.swift */; };
 		31B4801728353CF3003A74E9 /* DogWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4801628353CF3003A74E9 /* DogWeight.swift */; };
@@ -79,6 +80,7 @@
 		24E73A7C2833D0A000CBA2EC /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		310A81E2283FC0140052270B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		31482916283BB1D8001E839D /* DogsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsApiService.swift; sourceTree = "<group>"; };
+		3153C3E32847987F008CDDBD /* BreedsListEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListEnum.swift; sourceTree = "<group>"; };
 		31B4801228353CB9003A74E9 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		31B4801428353CD6003A74E9 /* DogHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogHeight.swift; sourceTree = "<group>"; };
 		31B4801628353CF3003A74E9 /* DogWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogWeight.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				31B4801428353CD6003A74E9 /* DogHeight.swift */,
 				31B4801628353CF3003A74E9 /* DogWeight.swift */,
 				31B4801828353D1B003A74E9 /* DogImage.swift */,
+				3153C3E32847987F008CDDBD /* BreedsListEnum.swift */,
 			);
 			path = Dog;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				3F85587728366B9A005BABBE /* CGImage+CVPixelBuffer.swift in Sources */,
 				3F33F3BF282E841D002A3BEE /* Request.swift in Sources */,
 				3F285F8C283FA3FD00206E87 /* AccelerometerService.swift in Sources */,
+				3153C3E42847987F008CDDBD /* BreedsListEnum.swift in Sources */,
 				3F33F3BB282E83A2002A3BEE /* WADButton.swift in Sources */,
 				3F85587928368781005BABBE /* Double+Percentage.swift in Sources */,
 				24E73A7D2833D0A000CBA2EC /* CameraPreview.swift in Sources */,
