@@ -10,7 +10,7 @@ import SwiftUI
 struct BreedSelectionModal: View {
     @Environment(\.dismiss) var dismiss
     @Binding var showingSheet: Bool
-    @State var selectedItem: String?
+    @Binding var selectedItem: String
     @State var isShowingDetailView = false
     @State var selectedImage: UIImage
     @State var classificationList: [(String, String)]!
@@ -45,6 +45,7 @@ struct BreedSelectionModal: View {
                     icon: Image(systemName: "plus")
                 ) {
                     isShowingDetailView = true
+                    DataController.shared.saveBreed(name: selectedItem, image: selectedImage)
                 }
             }
             .background(Color.Wad.gray1)
