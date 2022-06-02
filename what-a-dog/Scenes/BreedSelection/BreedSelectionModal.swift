@@ -10,7 +10,7 @@ import SwiftUI
 struct BreedSelectionModal: View {
     @Environment(\.dismiss) var dismiss
     @Binding var showingSheet: Bool
-    @Binding var selectedItem: String
+    @State var selectedItemIndex: Int = 0
     @State var isShowingDetailView = false
     @State var selectedImage: UIImage
     @State var classificationList: [(String, String)]?
@@ -37,9 +37,10 @@ struct BreedSelectionModal: View {
                     List {
                         ForEach(classificationList.indices, id: \.self) { indice in
                             BreedSelectionCell(
-                                selectedDog: $selectedItem,
+                                isSelected: selectedItemIndex == indice,
                                 cellName: classificationList[indice].0,
-                                breedPercentage: classificationList[indice].1
+                                breedPercentage: classificationList[indice].1,
+                                onTap: { selectedItemIndex = indice }
                             )
                         }
                     }
@@ -52,7 +53,11 @@ struct BreedSelectionModal: View {
                         icon: Image(systemName: "plus")
                     ) {
                         isShowingDetailView = true
-                        DataController.shared.saveBreed(name: selectedItem, image: selectedImage)
+                        DataController.shared.saveBreed(
+                            name: classificationList[selectedItemIndex].0,
+                            image: selectedImage
+                        )
+                        print("Saved breed: ", classificationList[selectedItemIndex].0)
                     }
                 } else {
                     VStack {

@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct BreedSelectionCell: View {
-    @Binding var selectedDog: String
+    let isSelected: Bool
     let cellName: String
     var breedPercentage: String
+    let onTap: () -> Void
 
     var body: some View {
         HStack {
-            if cellName == selectedDog {
+            if isSelected {
                 Image(systemName: "checkmark").foregroundColor(Color.Wad.green2)
             } else {
                 Image(systemName: "checkmark").foregroundColor(Color.Wad.gray2)
@@ -29,7 +30,7 @@ struct BreedSelectionCell: View {
         .padding(.all, 8)
         .listRowBackground(Color.Wad.gray2)
         .onTapGesture {
-            self.selectedDog = self.cellName
+            onTap()
         }
     }
 }

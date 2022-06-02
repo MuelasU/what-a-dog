@@ -11,7 +11,7 @@ class CameraViewModel: ObservableObject {
     @Published var hasSelectedImage = false
     @Published var selectedImage: UIImage!
     @Published var isShowingImagePicker = false
-    @Published var classification = [(String, String)]()
+    @Published var classification: [(String, String)]?
 
     var cameraService: CaptureDevice!
 
