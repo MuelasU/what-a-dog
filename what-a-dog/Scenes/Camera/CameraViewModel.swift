@@ -11,7 +11,7 @@ class CameraViewModel: ObservableObject {
     @Published var hasSelectedImage = false
     @Published var selectedImage: UIImage!
     @Published var isShowingImagePicker = false
-    @Published var classification = [(String, String)]()
+    @Published var classification: [(String, String)]?
 
     var cameraService: CaptureDevice!
 
@@ -20,7 +20,6 @@ class CameraViewModel: ObservableObject {
         cameraService.setCaptureAction { image in
             self.selectedImage = image
             self.hasSelectedImage = true
-            self.classify()
         }
     }
 
@@ -38,20 +37,23 @@ class CameraViewModel: ObservableObject {
         selectedImage = image
     }
 
-    // TODO: Use this to do classification
     func classify() {
         let cgImage = selectedImage.cgImage
         do {
             let breedDetector = try BreedDetector()
-            guard let classification = try breedDetector.classify(image: cgImage!)
-                .top(3)?
-                .formatted(fractionDigits: 2)
-            else {
+
+            guard let classification = try breedDetector.classify(image: cgImage!) else {
+                print("No dog in image")
+                return
+            }
+
+            guard let formatted = classification.top(3)?.formatted() else {
                 print("Error on handling classification")
                 return
             }
 
-            self.classification = classification
+            print(formatted)
+            self.classification = formatted
         } catch {
             print("Error on classifying image")
             return

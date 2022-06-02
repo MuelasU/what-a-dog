@@ -10,15 +10,14 @@ import SwiftUI
 struct BreedSelectionModal: View {
     @Environment(\.dismiss) var dismiss
     @Binding var showingSheet: Bool
-    @Binding var selectedItem: String
+    @State var selectedItemIndex: Int = 0
     @State var isShowingDetailView = false
     @State var selectedImage: UIImage
-    @State var classificationList: [(String, String)]!
+    @State var classificationList: [(String, String)]?
 
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
                 ZStack {
                     Image("card_square")
                         .resizable()
@@ -33,24 +32,45 @@ struct BreedSelectionModal: View {
                         )
                 }
                 .padding(.all, 16)
-                List {
-                    ForEach(classificationList.indices, id: \.self) { indice in
-                        BreedSelectionCell(selectedDog: $selectedItem, cellName: classificationList[indice].0, breedPercentage: classificationList[indice].1)
+
+                if let classificationList = classificationList {
+                    List {
+                        ForEach(classificationList.indices, id: \.self) { indice in
+                            BreedSelectionCell(
+                                isSelected: selectedItemIndex == indice,
+                                cellName: classificationList[indice].0,
+                                breedPercentage: classificationList[indice].1,
+                                onTap: { selectedItemIndex = indice }
+                            )
+                        }
                     }
-                }
-                Spacer()
-                NavigationLink(destination: BreedsListView(), isActive: $isShowingDetailView) { EmptyView() }
-                WADButton(
-                    text: "Add to my collection",
-                    icon: Image(systemName: "plus")
-                ) {
-                    isShowingDetailView = true
-                    DataController.shared.saveBreed(name: selectedItem, image: selectedImage)
+
+                    Spacer()
+
+                    NavigationLink(destination: BreedsListView(), isActive: $isShowingDetailView) { EmptyView() }
+                    WADButton(
+                        text: "Add to my collection",
+                        icon: Image(systemName: "plus")
+                    ) {
+                        isShowingDetailView = true
+                        DataController.shared.saveBreed(
+                            name: classificationList[selectedItemIndex].0,
+                            image: selectedImage
+                        )
+                        print("Saved breed: ", classificationList[selectedItemIndex].0)
+                    }
+                } else {
+                    VStack {
+                        Spacer()
+
+                        Text("No dog in image")
+
+                        Spacer()
+                    }
                 }
             }
             .background(Color.Wad.gray1)
-            .navigationBarTitle(Text("What a dog?"))
-            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("What a dog?")
             .navigationBarBackButtonHidden(false)
         }
     }
