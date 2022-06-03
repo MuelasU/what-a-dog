@@ -34,9 +34,9 @@ We appreciate any feedback related to UI design, features and functionalities, a
 </p>
 
 ## Developed by:
-- Gabriel Muelas
-- Eduardo Dini
-- Carolina Zanotto
-- Fernando Santos
-- Letícia Ferreira
-- Larissa Gomes
+- [Gabriel Muelas](https://www.linkedin.com/in/muelas/) 
+- [Eduardo Dini](https://www.linkedin.com/in/eduardodini/)
+- [Carolina Zanotto](https://www.linkedin.com/in/carolina-zanotto/)
+- [Fernando Santos](https://www.linkedin.com/in/fer-comp/)
+- [Letícia Ferreira](https://github.com/ltcfrr)
+- [Larissa Gomes](https://www.linkedin.com/in/larissa-escaliante-96656a191/)
